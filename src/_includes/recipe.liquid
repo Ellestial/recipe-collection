@@ -1,0 +1,39 @@
+---
+layout: base.liquid
+---
+
+<main>
+  <h1 class="recipe__title">{{title}}</h1>
+  <a href="" target="_blank">Print Recipe</a>
+
+  <div class="banner-wrapper">
+  {% if bannerAlt %}
+    <img class="banner" src="{{title|slug/}}.jpg" alt="{{bannerAlt}}" />
+  {% endif %}
+  </div>
+
+  {% if source %}
+  <a href="{{sourceUrl}}">{{source}}</a>
+  {% endif %}
+
+  {% if servings %}
+  <p class="servings">Servings: {{servings}}</p>
+  {% endif %}
+
+  {% if description %}
+  <p class="recipe__description">{{description}}</p>
+  {% endif %}
+
+  {% if tags %}
+  <aside class="tags">
+    <h2>Tags</h2>
+    <ul>
+      {% for tag in tags %}
+      <li>{{tag}}</li>
+      {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+
+  {{content}}
+</main>

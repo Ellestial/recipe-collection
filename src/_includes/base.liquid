@@ -7,13 +7,13 @@
   <title>Document</title>
 </head>
 <body>
-  <header>
-    <a href="/">Home Page</a>
-  </header>
-  <main>
-    {{content}}
+  {% include components/header.liquid %}
+  {% include components/search.liquid %}
+
+  {{content}}
+
+  {% if pagination %}
     <nav aria-labelledby="my-pagination">
-      <h2 id="my-pagination">This is my Pagination</h2>
     {% if pagination.href.previous %}
       <a href="{{pagination.href.previous}}">Previous page</a>
     {% endif %}
@@ -21,6 +21,6 @@
       <a href="{{pagination.href.next}}">Next page</a>
     {% endif %}
     </nav>
-  </main>
+  {% endif %}
 </body>
 </html>

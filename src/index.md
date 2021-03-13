@@ -1,7 +1,7 @@
 ---
-layout: layout.liquid
+layout: base.liquid
 pagination: 
-  data: collections.recipe
+  data: collections.recipes
   size: 2
   alias: recipes
 ---
