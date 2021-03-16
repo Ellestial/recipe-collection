@@ -1,14 +1,13 @@
 ---
 layout: base.liquid
 pagination: 
-  data: collections.recipes
+  data: collections.recipe
   size: 2
-  alias: recipes
 ---
 
 # Welcome to the Recipe Site
 
-{% for recipe in recipes %}
+{% for recipe in collections.recipe %}
 - [{{recipe.data.title}}]({{recipe.url}})
 {% endfor %}
 

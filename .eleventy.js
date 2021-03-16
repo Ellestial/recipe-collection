@@ -1,7 +1,4 @@
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy('assets');
-  eleventyConfig.addLayoutAlias('recipes', 'layouts/recipe.liquid');
 
   eleventyConfig.setTemplateFormats([
     'md',
@@ -11,8 +8,7 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      input: 'src',
-      includes: '_includes'
+      input: 'src'
     }
   }
 };

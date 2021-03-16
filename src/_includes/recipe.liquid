@@ -6,14 +6,14 @@ layout: base.liquid
   <h1 class="recipe__title">{{title}}</h1>
   <a href="" target="_blank">Print Recipe</a>
 
-  <div class="banner-wrapper">
-  {% if bannerAlt %}
-    <img class="banner" src="{{title|slug/}}.jpg" alt="{{bannerAlt}}" />
+  <div class="hero-wrapper">
+  {% if heroAlt %}
+    <img class="hero" src="{{title|slug/}}.jpg" alt="{{heroAlt}}" />
   {% endif %}
   </div>
 
   {% if source %}
-  <a href="{{sourceUrl}}">{{source}}</a>
+  <a href="{{source.url}}">{{source.name}}</a>
   {% endif %}
 
   {% if servings %}
@@ -24,12 +24,41 @@ layout: base.liquid
   <p class="recipe__description">{{description}}</p>
   {% endif %}
 
-  {% if tags %}
+  {% if tag %}
   <aside class="tags">
     <h2>Tags</h2>
     <ul>
-      {% for tag in tags %}
-      <li>{{tag}}</li>
+      {% for item in tag %}
+      <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+
+  <section class="ingredients">
+    <h2>Ingredients</h2>
+    <ul>
+      {% for ingredient in ingredients %}
+      <li>{{ingredient}}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="instructions">
+    <h2>Instructions</h2>
+    <ol>
+      {% for item in instructions %}
+      <li>{{item}}</li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  {% if nutrition %}
+  <aside class="nutrition">
+    <h2>Nutritional Information</h2>
+    <ul>
+      {% for item in nutrition %}
+      <li>{{item}}</li>
       {% endfor %}
     </ul>
   </aside>
