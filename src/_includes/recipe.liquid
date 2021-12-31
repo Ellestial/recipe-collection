@@ -3,40 +3,37 @@ layout: base.liquid
 ---
 
 <main>
-  <h1 class="recipe__title">{{title}}</h1>
   <a href="" target="_blank">Print Recipe</a>
+  <div class="intro-banner">
+    <div class="intro-banner__hero-wrapper">
+      {% if img.alt %}
+        <img class="intro-banner__img" src="{{title|slug/}}.jpg" alt="{{img.alt}}" />
+        <div class="intro-banner__img-credit">Photo Credit: {{img.credit}}</div>
+      {% endif %}
+    </div>
+    <div class="intro-banner__content">
+      <div class="intro-banner__tags">
 
-  <div class="hero-wrapper">
-  {% if heroAlt %}
-    <img class="hero" src="{{title|slug/}}.jpg" alt="{{heroAlt}}" />
-  {% endif %}
+      </div>
+      <h2 class="intro-banner__title">{{title}}</h2>
+      <div class="intro-banner__quick-facts">
+        {% if servings %}
+        <p class="servings"><em>Servings</em> {{servings}}</p>
+        {% endif %}
+
+        {% if duration %}
+        <p class="duration"><em>Duration</em> {{duration}}</p>
+        {% endif %}
+
+        {% if difficulty %}
+        <p class="difficulty"><em>Difficulty</em> {{difficulty}}</p>
+        {% endif %}
+      </div>
+    </div>
   </div>
 
-  {% if source %}
-  <a href="{{source.url}}">{{source.name}}</a>
-  {% endif %}
-
-  {% if servings %}
-  <p class="servings">Servings: {{servings}}</p>
-  {% endif %}
-
-  {% if description %}
-  <p class="recipe__description">{{description}}</p>
-  {% endif %}
-
-  {% if tag %}
-  <aside class="tags">
-    <h2>Tags</h2>
-    <ul>
-      {% for item in tag %}
-      <li>{{item}}</li>
-      {% endfor %}
-    </ul>
-  </aside>
-  {% endif %}
-
-  <section class="ingredients">
-    <h2>Ingredients</h2>
+  <section class="ingredient-panel">
+    <h3>Ingredients</h3>
     <ul>
       {% for ingredient in ingredients %}
       <li>{{ingredient}}</li>
@@ -44,25 +41,26 @@ layout: base.liquid
     </ul>
   </section>
 
-  <section class="instructions">
-    <h2>Instructions</h2>
-    <ol>
-      {% for item in instructions %}
-      <li>{{item}}</li>
-      {% endfor %}
-    </ol>
+  <section class="instructions-panel">
+    <h3>Instructions</h3>
+    <div>{{content | safe }}</div>
   </section>
 
   {% if nutrition %}
-  <aside class="nutrition">
-    <h2>Nutritional Information</h2>
+  <aside class="nutrition-panel">
+    <h3>Nutritional Information</h3>
     <ul>
-      {% for item in nutrition %}
-      <li>{{item}}</li>
-      {% endfor %}
+      <li class="nutrition-panel__callout">{{nutrition.calories}} <em>calories</em></li>
+      <li class="nutrition-panel__item"><em>Total Fat</em>{{nutrition.totalFat}}g</li>
+      <li class="nutrition-panel__item"><em>Saturated Fat</em>{{nutrition.saturatedFat}}g</li>
+      <li class="nutrition-panel__item"><em>Trans Fat</em>{{nutrition.transFat}}g</li>
+      <li class="nutrition-panel__item"><em>Cholesterol</em>{{nutrition.cholesterol}}mg</li>
+      <li class="nutrition-panel__item"><em>Total Carbs</em>{{nutrition.carbs}}g</li>
+      <li class="nutrition-panel__item"><em>Sodium</em>{{nutrition.sodium}}mg</li>
+      <li class="nutrition-panel__item"><em>Sugar</em>{{nutrition.sugar}}g</li>
+      <li class="nutrition-panel__item"><em>Protein</em>{{nutrition.protein}}g</li>
+      <li class="nutrition-panel__item"><em>Fiber</em>{{nutrition.fiber}}g</li>
     </ul>
   </aside>
   {% endif %}
-
-  {{content}}
 </main>
