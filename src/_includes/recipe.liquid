@@ -2,7 +2,7 @@
 layout: base.liquid
 ---
 
-<main>
+<main class="recipe" data-category="category-{{data.category}}">
   <a href="" target="_blank">Print Recipe</a>
   <div class="intro-banner">
     <div class="intro-banner__hero-wrapper">
@@ -18,45 +18,48 @@ layout: base.liquid
       <h2 class="intro-banner__title">{{title}}</h2>
       <div class="intro-banner__quick-facts">
         {% if servings %}
-        <p class="servings"><em>Servings</em> {{servings}}</p>
+        <p class="servings"><em>Servings</em> {{data.servings}}</p>
         {% endif %}
 
-        {% if duration %}
-        <p class="duration"><em>Duration</em> {{duration}}</p>
+        {% if time %}
+        <p class="time"><em>Time</em> {{data.time}}</p>
         {% endif %}
 
         {% if difficulty %}
-        <p class="difficulty"><em>Difficulty</em> {{difficulty}}</p>
+        <p class="difficulty" data-difficulty='{{data.difficulty}}'><em>Difficulty</em> {{data.difficulty}}</p>
         {% endif %}
       </div>
     </div>
   </div>
 
   <section class="ingredient-panel">
-    <h3>Ingredients</h3>
+    <h3 class="header-secondary">Ingredients</h3>
     <div>{{page.excerpt | safe }}</div>
   </section>
 
   <section class="instructions-panel">
-    <h3>Instructions</h3>
+    <h3 class="header-secondary">Instructions</h3>
     <div>{{content | safe }}</div>
   </section>
 
   {% if nutrition %}
   <aside class="nutrition-panel">
-    <h3>Nutritional Information</h3>
-    <ul>
-      <li class="nutrition-panel__callout">{{nutrition.calories}} <em>calories</em></li>
-      <li class="nutrition-panel__item"><em>Total Fat</em>{{nutrition.totalFat}}g</li>
-      <li class="nutrition-panel__item"><em>Saturated Fat</em>{{nutrition.saturatedFat}}g</li>
-      <li class="nutrition-panel__item"><em>Trans Fat</em>{{nutrition.transFat}}g</li>
-      <li class="nutrition-panel__item"><em>Cholesterol</em>{{nutrition.cholesterol}}mg</li>
-      <li class="nutrition-panel__item"><em>Total Carbs</em>{{nutrition.carbs}}g</li>
-      <li class="nutrition-panel__item"><em>Sodium</em>{{nutrition.sodium}}mg</li>
-      <li class="nutrition-panel__item"><em>Sugar</em>{{nutrition.sugar}}g</li>
-      <li class="nutrition-panel__item"><em>Protein</em>{{nutrition.protein}}g</li>
-      <li class="nutrition-panel__item"><em>Fiber</em>{{nutrition.fiber}}g</li>
-    </ul>
+
+    <div class="nutrition-panel__content">
+      <h3 class="header-secondary">Nutritional Information</h3>
+      <ul>
+        <li class="nutrition-panel__callout">{{nutrition.calories}} <em>calories</em></li>
+        <li class="nutrition-panel__item"><em>Total Fat</em>{{nutrition.totalFat}}g</li>
+        <li class="nutrition-panel__item"><em>Saturated Fat</em>{{nutrition.saturatedFat}}g</li>
+        <li class="nutrition-panel__item"><em>Trans Fat</em>{{nutrition.transFat}}g</li>
+        <li class="nutrition-panel__item"><em>Cholesterol</em>{{nutrition.cholesterol}}mg</li>
+        <li class="nutrition-panel__item"><em>Total Carbs</em>{{nutrition.carbs}}g</li>
+        <li class="nutrition-panel__item"><em>Sodium</em>{{nutrition.sodium}}mg</li>
+        <li class="nutrition-panel__item"><em>Sugar</em>{{nutrition.sugar}}g</li>
+        <li class="nutrition-panel__item"><em>Protein</em>{{nutrition.protein}}g</li>
+        <li class="nutrition-panel__item"><em>Fiber</em>{{nutrition.fiber}}g</li>
+      </ul>
+    </div>
   </aside>
   {% endif %}
 </main>

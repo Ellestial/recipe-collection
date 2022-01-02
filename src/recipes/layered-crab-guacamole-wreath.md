@@ -6,13 +6,12 @@ img:
   alt: Top down view of the dish
   credit: Emily
 
-sourceLabel: Karen Mahofer
-sourceURL: n/a
-
-category: appetizer
-servings: 10
-duration: 30m
-difficulty: 1.5
+data:
+  author: Karen Mahofer
+  category: appetizer
+  servings: 10
+  time: 30m
+  difficulty: 1.5
 
 nutrition:
   calories: 200
@@ -68,6 +67,8 @@ tags:
 #### Guacamole
 1. Mix garlic, jalepeno, lemon juice, Tabasco, salt, pepper, and avocados in a bowl. Stir together until mostly smooth, but the avocado should still be somewhat chunky. Add green onions and cilantro.
 2. Spread on top of the cream cheese layer.
+
+![alt text](https://via.placeholder.com/500x200)
 
 #### Crab Topping
 1. Mix all crab topping ingredients together. Place on top of guacamole layer and gently press in. Chill. Serve with tortilla chips.

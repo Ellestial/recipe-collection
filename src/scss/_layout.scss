@@ -1,0 +1,13 @@
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  font: var(--font-size-body) var(--font-family-body);
+  line-height: 1.2;
+}
+
+.header-secondary {
+  font: var(--font-size-header-sm) var(--font-family-header);
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
