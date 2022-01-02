@@ -1,0 +1,36 @@
+// variables
+
+:root {
+
+  // color tokens
+  --color-gray: #393333
+  --color-purple: #87738b;
+  --color-moss: #809848;
+  --color-redwood: #a3574d;
+  --color-rose: #b25677;
+  --color-slate: #628395;
+  --color-navy: #4a4e72;
+
+  --color-yellow-100: #f1f1da;
+  --color-yellow-300: #ece4c8;
+  --color-yellow-500: #f4e3a7;
+  --color-yellow-700: #f5c109;
+
+  // colors
+  --color-primary: var(--color-gray);
+  --color-secondary-breakfast: var(--color-dark-blue);
+  --color-secondary-appetizer: var(--color-slate);
+  --color-secondary-entree: var(--color-redwood);
+  --color-secondary-side: var(--color-moss);
+  --color-secondary-dessert: var(--color-purple);
+  --color-secondary-bakery: var(--color-rose);
+
+  --color-interactive: var(--color-yellow-700);
+  --color-bg: var(--color-yellow-100);
+  --color-bg-shade: var(--color-yellow-300);
+  --color-text-on-dark: var(--color-yellow-500);
+}
+
+body {
+  font-family: 'Romes';
+}

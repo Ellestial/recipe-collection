@@ -34,6 +34,34 @@ tags:
 ---
 
 #### Base
+- **2** (8oz.) packages cream cheese, softened
+- **1/4** c. mayonnaise
+- **1/4** c. lemon juice
+- **1/4** tsp. cayenne pepper
+
+#### Guacamole
+- **3** ripe avocados
+- **3** cloves of garlic, minced
+- **1** jalepeno, minced
+- **3** Tbsp. lemo juice
+- **1** tsp. Tabasco
+- **1/2** tsp. salt
+- **1** dash of black pepper
+- **2** green onions, chopped
+- **2** Tbsp. cilantro, minced
+
+#### Crab Topping
+- **2** cans crabmeat, drained
+- **2** green onions, chopped
+- **1** tomato, seeded and chopped
+- **1/2** c. chopped red onion
+- **1/4** c. lime juice
+- **1** Tbsp. cilantro, minced
+- **2** Tbsp. parsley, minced
+
+<!-- excerpt -->
+
+#### Base
 1. Add cream cheese, mayonnaise, lemon juice, and cayenne pepper to a bowl. Beat together with a mixer until smooth.
 2. Spread in a wreath shape on a large platter.
 

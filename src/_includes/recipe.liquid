@@ -34,11 +34,7 @@ layout: base.liquid
 
   <section class="ingredient-panel">
     <h3>Ingredients</h3>
-    <ul>
-      {% for ingredient in ingredients %}
-      <li>{{ingredient}}</li>
-      {% endfor %}
-    </ul>
+    <div>{{page.excerpt | safe }}</div>
   </section>
 
   <section class="instructions-panel">
