@@ -51,8 +51,8 @@
   --space-100: #{pxToRem(4)};
 
   // misc
-  --text-shadow: 4px 4px 0 var(--color-yellow-100);
-  --text-shadow-dark: 4px 4px 0 var(--color-yellow-500);
+  --shadow: 4px 4px 0 var(--color-yellow-100);
+  --shadow-dark: 4px 4px 0 var(--color-yellow-500);
 }
 
 $breakpoints: (

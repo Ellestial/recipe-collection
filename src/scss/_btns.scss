@@ -1,0 +1,14 @@
+
+.btn {
+  cursor: pointer;
+}
+
+.btn--secondary {
+  padding: var(--space-100) var(--space-500);
+  background: var(--color-primary);
+  color: var(--color-interactive);
+  font: var(--font-size-subheader-sm) var(--font-family-subheader);
+  border-radius: 26px;
+  border: 0;
+  box-shadow: var(--shadow-dark);
+}

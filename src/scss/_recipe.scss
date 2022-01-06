@@ -13,6 +13,45 @@
     }
   }
 
+  .intro-banner {
+
+    @include breakpoint(md) {
+      display: flex;
+      align-items: center;
+    }
+
+    .intro-banner__links {
+      margin-bottom: var(--space-300);
+
+      @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      span {
+        font-family: var(--font-family-subheader);
+        color: var(--color-secondary);
+      }
+    }
+
+    .intro-banner__title {
+      padding: var(--space-700) 0 var(--space-500);
+      font: var(--font-size-header-lg) var(--font-family-header);
+      text-transform: uppercase;
+      text-shadow: var(--shadow-dark);
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      line-height: 1;
+    }
+  }
+
+  .intro-banner__quick-facts {
+
+    @include breakpoint(md) {
+      display: flex;
+    }
+  }
+
   .ingredient-panel,
   .instructions-panel,
   .nutrition-panel {
@@ -67,7 +106,7 @@
           flex-shrink: 0;
           font: var(--font-size-subheader-lg) var(--font-family-header);
           counter-increment: section;
-          text-shadow: var(--text-shadow-dark);
+          shadow: var(--shadow-dark);
           content: counter(section) '.';
         }
       }
@@ -111,7 +150,7 @@
       padding: var(--space-700);
       text-align: center;
       font: var(--font-size-header-sm) var(--font-family-header);
-      text-shadow: var(--text-shadow);
+      shadow: var(--shadow);
   
       em {
         margin-left: var(--space-300);
@@ -126,12 +165,12 @@
       padding: var(--space-500) 0;
       font: var(--font-size-subheader-sm) var(--font-family-header);
       border-bottom: 1px solid;
-      text-shadow: var(--text-shadow);
+      shadow: var(--shadow);
   
       em {
         font: var(--font-size-body) var(--font-family-subheader);
         color: var(--color-secondary);
-        text-shadow: none;
+        shadow: none;
       }
     }
   }
