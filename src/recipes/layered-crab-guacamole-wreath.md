@@ -2,7 +2,6 @@
 title: Layered Crab & Guacamole Wreath
 
 img:
-  url: https://via.placeholder.com/500x700
   alt: Top down view of the dish
   credit: Emily
 
@@ -34,9 +33,9 @@ tags:
 
 #### Base
 - **2** (8oz.) packages cream cheese, softened
-- **1/4** c. mayonnaise
-- **1/4** c. lemon juice
-- **1/4** tsp. cayenne pepper
+- **¼** c. mayonnaise
+- **¼** c. lemon juice
+- **¼** tsp. cayenne pepper
 
 #### Guacamole
 - **3** ripe avocados
@@ -44,7 +43,7 @@ tags:
 - **1** jalepeno, minced
 - **3** Tbsp. lemo juice
 - **1** tsp. Tabasco
-- **1/2** tsp. salt
+- **½** tsp. salt
 - **1** dash of black pepper
 - **2** green onions, chopped
 - **2** Tbsp. cilantro, minced
@@ -53,8 +52,8 @@ tags:
 - **2** cans crabmeat, drained
 - **2** green onions, chopped
 - **1** tomato, seeded and chopped
-- **1/2** c. chopped red onion
-- **1/4** c. lime juice
+- **½** c. chopped red onion
+- **¼** c. lime juice
 - **1** Tbsp. cilantro, minced
 - **2** Tbsp. parsley, minced
 

@@ -56,10 +56,10 @@
   --font-size-subheader-lg: 49px;
   --font-size-subheader-sm: 32px;
   --font-size-body: 26px;
-  --space-900: 1.25rem;
-  --space-700: 1rem;
-  --space-500: 0.75rem;
-  --space-300: 0.5rem;
+  --space-900: 2.5rem;
+  --space-700: 1.75rem;
+  --space-500: 1rem;
+  --space-300: 0.75rem;
   --space-100: 0.25rem;
   --text-shadow: 4px 4px 0 var(--color-yellow-100);
   --text-shadow-dark: 4px 4px 0 var(--color-yellow-500);
@@ -96,14 +96,24 @@ body {
 .recipe[data-category=category-side] {
   --color-secondary: var(--color-secondary-side);
 }
+.recipe .ingredient-panel,
+.recipe .instructions-panel,
+.recipe .nutrition-panel {
+  padding: var(--space-900);
+}
 .recipe .ingredient-panel h4,
 .recipe .instructions-panel h4 {
+  margin-bottom: var(--space-300);
   font: var(--font-size-subheader-lg) var(--font-family-subheader);
   color: var(--color-secondary);
 }
-.recipe .ingredient-panel p,
-.recipe .instructions-panel p {
-  margin-bottom: var(--space-500);
+.recipe .ingredient-panel h4:not(:first-child),
+.recipe .instructions-panel h4:not(:first-child) {
+  margin-top: var(--space-700);
+}
+.recipe .ingredient-panel ul li:not(:last-child),
+.recipe .instructions-panel ul li:not(:last-child) {
+  margin-bottom: var(--space-300);
 }
 .recipe .ingredient-panel ul strong,
 .recipe .instructions-panel ul strong {
@@ -124,7 +134,7 @@ body {
   display: flex;
 }
 .recipe .instructions-panel ol li:not(:last-child) {
-  margin-bottom: var(--space-500);
+  margin-bottom: var(--space-900);
 }
 .recipe .instructions-panel ol li::before {
   width: 60px;
@@ -154,8 +164,8 @@ body {
   grid-gap: 0 var(--space-500);
 }
 .recipe .nutrition-panel .nutrition-panel__callout {
-  width: 46%;
-  min-height: 85px;
+  width: 43%;
+  min-height: 84px;
   position: absolute;
   top: 0;
   right: 0;

@@ -14,18 +14,29 @@
   }
 
   .ingredient-panel,
+  .instructions-panel,
+  .nutrition-panel {
+    padding: var(--space-900);
+  }
+
+  .ingredient-panel,
   .instructions-panel {
 
     h4 {
+      margin-bottom: var(--space-300);
       font: var(--font-size-subheader-lg) var(--font-family-subheader);
       color: var(--color-secondary);
-    }
 
-    p {
-      margin-bottom: var(--space-500);
+      &:not(:first-child) {
+        margin-top: var(--space-700);
+      }
     }
 
     ul {
+
+      li:not(:last-child) {
+        margin-bottom: var(--space-300);
+      }
 
       strong {
         width: 55px;
@@ -48,7 +59,7 @@
         display: flex;
   
         &:not(:last-child) {
-          margin-bottom: var(--space-500);
+          margin-bottom: var(--space-900);
         }
   
         &::before {
@@ -88,8 +99,8 @@
     }
   
     .nutrition-panel__callout {
-      width: 46%;
-      min-height: 85px;
+      width: 43%;
+      min-height: 84px;
       position: absolute;
       top: 0;
       right: 0;
