@@ -92,6 +92,14 @@ body {
   border-bottom: 1px solid;
 }
 
+@media (min-width: 992px) {
+  .recipe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--space-300);
+    grid-template-areas: "intro intro intro" "ingre instr instr" "ingre nutri nutri";
+  }
+}
 .recipe[data-category=category-appetizer] {
   --color-secondary: var(--color-secondary-appetizer);
 }
@@ -109,6 +117,9 @@ body {
 }
 .recipe[data-category=category-side] {
   --color-secondary: var(--color-secondary-side);
+}
+.recipe .intro-banner {
+  grid-area: intro;
 }
 @media (min-width: 992px) {
   .recipe .intro-banner {
@@ -138,10 +149,25 @@ body {
   border-bottom: 1px solid;
   line-height: 1;
 }
+.recipe .intro-banner__quick-facts {
+  text-align: center;
+}
 @media (min-width: 992px) {
   .recipe .intro-banner__quick-facts {
     display: flex;
   }
+}
+.recipe .intro-banner__quick-fact {
+  padding: var(--space-300);
+  border: 1px solid;
+  font: var(--font-size-header-sm) var(--font-family-header);
+  text-shadow: var(--shadow-dark);
+}
+.recipe .intro-banner__quick-fact em {
+  display: block;
+  font: var(--font-size-subheader-sm) var(--font-family-subheader);
+  text-shadow: none;
+  color: var(--color-secondary);
 }
 .recipe .ingredient-panel,
 .recipe .instructions-panel,
@@ -170,9 +196,13 @@ body {
   text-align: right;
   font-weight: bold;
 }
+.recipe .ingredient-panel {
+  grid-area: ingre;
+  background: var(--color-secondary);
+  color: #fff;
+}
 .recipe .instructions-panel {
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-area: instr;
 }
 .recipe .instructions-panel ol {
   counter-reset: section;
@@ -192,13 +222,12 @@ body {
   content: counter(section) ".";
 }
 .recipe .nutrition-panel {
+  grid-area: nutri;
   padding: var(--space-900);
   background: var(--color-bg-shade);
 }
 .recipe .nutrition-panel .nutrition-panel__content {
-  max-width: 900px;
   position: relative;
-  margin: 0 auto;
 }
 @media (min-width: 992px) {
   .recipe .nutrition-panel h3 {

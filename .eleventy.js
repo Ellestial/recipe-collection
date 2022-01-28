@@ -1,10 +1,17 @@
 module.exports = function(eleventyConfig) {
 
-  eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: true,
-    excerpt_alias: 'excerpt',
-    excerpt_separator: "<!-- excerpt -->"
-  });
+  /* Markdown-It 'markdownify' filter
+    source: BradCoffield/kidlitconnection@e42a6de)
+  */
+    const md = require("markdown-it")({
+      html: true,
+      linkify: true,
+      typographer: true,
+    });
+  
+    eleventyConfig.addFilter("markdownify", (markdownString) =>
+      md.render(markdownString)
+    );
 
   eleventyConfig.addWatchTarget('./src/scss/');
   eleventyConfig.addPassthroughCopy('./src/css/');
@@ -18,7 +25,10 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      input: 'src'
-    }
-  }
+      input: 'src',
+    },
+    markdownTemplateEngine: "liquid",
+    dataTemplateEngine: "liquid",
+    htmlTemplateEngine: "liquid",
+  };
 };

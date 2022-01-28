@@ -1,6 +1,16 @@
 
 .recipe {
 
+  @include breakpoint(md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--space-300);
+    grid-template-areas:
+    "intro intro intro"
+    "ingre instr instr"
+    "ingre nutri nutri"
+  }
+
   @each $category in
   (appetizer),
   (bakery),
@@ -14,6 +24,7 @@
   }
 
   .intro-banner {
+    grid-area: intro;
 
     @include breakpoint(md) {
       display: flex;
@@ -46,9 +57,24 @@
   }
 
   .intro-banner__quick-facts {
+    text-align: center;
 
     @include breakpoint(md) {
       display: flex;
+    }
+  }
+
+  .intro-banner__quick-fact {
+    padding: var(--space-300);
+    border: 1px solid;
+    font: var(--font-size-header-sm) var(--font-family-header);
+    text-shadow: var(--shadow-dark);
+
+    em {
+      display: block;
+      font: var(--font-size-subheader-sm) var(--font-family-subheader);
+      text-shadow: none;
+      color: var(--color-secondary);
     }
   }
 
@@ -87,9 +113,14 @@
     }
   }
 
+  .ingredient-panel {
+    grid-area: ingre;
+    background: var(--color-secondary);
+    color: #fff;
+  }
+
   .instructions-panel {
-    max-width: 1000px;
-    margin: 0 auto;
+    grid-area: instr;
 
     ol {
       counter-reset: section;
@@ -115,13 +146,12 @@
   
   // nutrition information
   .nutrition-panel {
+    grid-area: nutri;
     padding: var(--space-900);
     background: var(--color-bg-shade);
   
     .nutrition-panel__content {
-      max-width: 900px;
       position: relative;
-      margin: 0 auto;
     }
   
     h3 {
