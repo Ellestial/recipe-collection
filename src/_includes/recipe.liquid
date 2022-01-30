@@ -18,15 +18,22 @@ layout: base.liquid
       <h2 class="intro-banner__title">{{title}}</h2>
       <div class="intro-banner__quick-facts">
         {% if data.servings %}
-        <p class="intro-banner__servings intro-banner__quick-fact"><em>Servings</em> {{data.servings}}</p>
+        <p class="intro-banner__servings intro-banner__quick-fact">
+          <span class="intro-banner__servings-icon"></span>
+          <em>Servings</em> 
+          {{data.servings}}</p>
         {% endif %}
 
         {% if data.time %}
-        <p class="intro-banner__time intro-banner__quick-fact"><em>Time</em> {{data.time}}</p>
+        <p class="intro-banner__time intro-banner__quick-fact">
+          <span class="intro-banner__time-icon"></span>
+          <em>Time</em> {{data.time}}</p>
         {% endif %}
 
         {% if data.difficulty %}
-        <p class="intro-banner__difficulty intro-banner__quick-fact" data-difficulty='{{data.difficulty}}'><em>Difficulty</em> {{data.difficulty}}</p>
+        <p class="intro-banner__difficulty intro-banner__quick-fact" data-difficulty='{{data.difficulty}}'>
+          <span class="intro-banner__difficulty-icon"></span>
+          <em>Difficulty</em> {{data.difficulty}}</p>
         {% endif %}
       </div>
     </div>

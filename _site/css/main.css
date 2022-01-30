@@ -127,20 +127,21 @@ body {
     align-items: center;
   }
 }
-.recipe .intro-banner .intro-banner__links {
+.recipe .intro-banner__links {
   margin-bottom: var(--space-300);
 }
 @media (min-width: 992px) {
-  .recipe .intro-banner .intro-banner__links {
+  .recipe .intro-banner__links {
     display: flex;
     justify-content: space-between;
   }
 }
-.recipe .intro-banner .intro-banner__links span {
+.recipe .intro-banner__links span {
   font-family: var(--font-family-subheader);
   color: var(--color-secondary);
 }
-.recipe .intro-banner .intro-banner__title {
+.recipe .intro-banner__title {
+  margin: var(--space-900) 0;
   padding: var(--space-700) 0 var(--space-500);
   font: var(--font-size-header-lg) var(--font-family-header);
   text-transform: uppercase;
@@ -150,11 +151,16 @@ body {
   line-height: 1;
 }
 .recipe .intro-banner__quick-facts {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-gap: var(--space-500);
+  grid-template-areas: "serv" "time" "diff";
   text-align: center;
 }
 @media (min-width: 992px) {
   .recipe .intro-banner__quick-facts {
-    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "serv time diff";
   }
 }
 .recipe .intro-banner__quick-fact {
@@ -163,11 +169,36 @@ body {
   font: var(--font-size-header-sm) var(--font-family-header);
   text-shadow: var(--shadow-dark);
 }
+.recipe .intro-banner__quick-fact span {
+  width: 75px;
+  height: 73px;
+  display: block;
+  margin: -45px auto 0;
+  padding: 0 var(--space-300);
+}
 .recipe .intro-banner__quick-fact em {
   display: block;
   font: var(--font-size-subheader-sm) var(--font-family-subheader);
   text-shadow: none;
   color: var(--color-secondary);
+}
+.recipe .intro-banner__servings {
+  grid-area: serv;
+}
+.recipe .intro-banner__time {
+  grid-area: time;
+}
+.recipe .intro-banner__diff {
+  grid-area: diff;
+}
+.recipe .intro-banner__servings-icon {
+  background: url("../assets/icons/icon-servings.svg") center center no-repeat var(--color-bg);
+}
+.recipe .intro-banner__time-icon {
+  background: url("../assets/icons/icon-time.svg") center center no-repeat var(--color-bg);
+}
+.recipe .intro-banner__difficulty-icon {
+  background: url("../assets/icons/icon-difficulty.svg") center center no-repeat var(--color-bg);
 }
 .recipe .ingredient-panel,
 .recipe .instructions-panel,
