@@ -3,7 +3,7 @@
 :root {
 
   // color tokens
-  --color-gray: #393333;
+  --color-gray: #393232;
   --color-purple: #87738b;
   --color-moss: #809848;
   --color-redwood: #a3574d;
@@ -49,6 +49,7 @@
   --space-500: #{pxToRem(16)};
   --space-300: #{pxToRem(12)};
   --space-100: #{pxToRem(4)};
+  --space-gutter: #{pxToRem(32)};
 
   // misc
   --shadow: 4px 4px 0 var(--color-yellow-100);

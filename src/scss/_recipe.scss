@@ -1,14 +1,15 @@
 
 .recipe {
+  padding: var(--space-900) var(--space-900) 0;
 
   @include breakpoint(md) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: var(--space-300);
     grid-template-areas:
     "intro intro intro"
     "ingre instr instr"
-    "ingre nutri nutri"
+    "ingre nutri nutri";
+    grid-gap: var(--space-gutter);
   }
 
   @each $category in
@@ -27,8 +28,35 @@
     grid-area: intro;
 
     @include breakpoint(md) {
-      display: flex;
+      display: grid;
       align-items: center;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: var(--space-gutter);
+    }
+  }
+
+  .intro-banner__hero-wrapper {
+    position: relative;
+
+    @include breakpoint(md) {
+      grid-column: 1 / 3;
+    }
+  }
+
+  .intro-banner__img-credit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: var(--space-300);
+    padding: var(--space-100) var(--space-300);
+    background: var(--color-bg);
+    font-family: var(--font-family-subheader);
+  }
+
+  .intro-banner__content {
+
+    @include breakpoint(md) {
+      grid-column: 3 / 6;
     }
   }
 
@@ -60,7 +88,7 @@
   .intro-banner__quick-facts {
     display: grid;
     grid-template-rows: auto auto auto;
-    grid-gap: var(--space-500);
+    grid-gap: 0 var(--space-gutter);
     grid-template-areas:
     "serv"
     "time"
@@ -79,6 +107,10 @@
     border: 1px solid;
     font: var(--font-size-header-sm) var(--font-family-header);
     text-shadow: var(--shadow-dark);
+
+    @include breakpoint(md) {
+      min-height: 160px;
+    }
 
     span {
       width: 75px;
@@ -121,12 +153,6 @@
   }
 
   .ingredient-panel,
-  .instructions-panel,
-  .nutrition-panel {
-    padding: var(--space-900);
-  }
-
-  .ingredient-panel,
   .instructions-panel {
 
     h4 {
@@ -159,6 +185,21 @@
     grid-area: ingre;
     background: var(--color-secondary);
     color: #fff;
+
+    &::before {
+
+      @include breakpoint(md) {
+        width: 33.3333%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: inherit;
+        content: '';
+      }
+    }
   }
 
   .instructions-panel {
@@ -189,7 +230,7 @@
   // nutrition information
   .nutrition-panel {
     grid-area: nutri;
-    padding: var(--space-900);
+    padding: var(--space-500);
     background: var(--color-bg-shade);
   
     .nutrition-panel__content {

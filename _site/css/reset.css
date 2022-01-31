@@ -52,4 +52,9 @@ table {
   border-spacing: 0;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 /*# sourceMappingURL=reset.css.map */
