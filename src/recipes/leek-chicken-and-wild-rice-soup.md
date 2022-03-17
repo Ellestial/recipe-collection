@@ -32,21 +32,20 @@ tags:
 - rice
 - fennel
 
----
-
-- **1½** lb. leeks (about 2 large)
-- **3** 3 Tbs. extra-virgin olive oil
-- **2** c. finely chopped fresh fennel (from 1 large bulb; fronds reserved for garnish, if you like)
-- **½** c. finely chopped celery plus 1/2 c. coarsely chopped celery leaves
-- **⅓** c. jasmine rice
-- **1** clove garlic, finely chopped
-- **½** tsp. smoked paprika
+ingredients:
+- 1½ lb. leeks (about 2 large)
+- 3 3 Tbs. extra-virgin olive oil
+- 2 c. finely chopped fresh fennel (from 1 large bulb; fronds reserved for garnish, if you like)
+- ½ c. finely chopped celery plus 1/2 c. coarsely chopped celery leaves
+- ⅓ c. jasmine rice
+- 1 clove garlic, finely chopped
+- ½ tsp. smoked paprika
 - Kosher salt and freshly ground black pepper
-- **6** c. lower-salt chicekn broth
-- **1** lb. boneless, skinless chicken breast, each breast cut into thirds lengthwise, then thinly sliced crosswise
+- 6 c. lower-salt chicekn broth
+- 1 lb. boneless, skinless chicken breast, each breast cut into thirds lengthwise, then thinly sliced crosswise
 - Fresh lemon juice, to taste
 
-<!-- excerpt -->
+---
 
 1. Trim the leeks, leaving the white and light-green parts. Slice in half lengthwise, then crosswise into 1/4-inch-thick half-moon slices to yield about 3-1/2 cups. Rinse well, then pat dry.
 2. Heat the oil in a 5- to 7-quart Dutch oven or other wide heavy pot over medium heat. Add the leeks, fennel, and celery, and cook, stirring occasionally, until tender, 7 to 10 minutes.
