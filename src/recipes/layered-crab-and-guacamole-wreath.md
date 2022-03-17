@@ -30,32 +30,33 @@ tags:
 - seafood
 - dip
 
-ingredients: |
-  #### Base
-  - **2** (8oz.) packages cream cheese, softened
-  - **¼** c. mayonnaise
-  - **¼** c. lemon juice
-  - **¼** tsp. cayenne pepper
-
-  #### Guacamole
-  - **3** ripe avocados
-  - **3** cloves of garlic, minced
-  - **1** jalepeno, minced
-  - **3** Tbsp. lemo juice
-  - **1** tsp. Tabasco
-  - **½** tsp. salt
-  - **1** dash of black pepper
-  - **2** green onions, chopped
-  - **2** Tbsp. cilantro, minced
-
-  #### Crab Topping
-  - **2** cans crabmeat, drained
-  - **2** green onions, chopped
-  - **1** tomato, seeded and chopped
-  - **½** c. chopped red onion
-  - **¼** c. lime juice
-  - **1** Tbsp. cilantro, minced
-  - **2** Tbsp. parsley, minced
+ingredients:
+- title: Base
+  list:
+    - 2 (8oz.) packages cream cheese, softened
+    - 1/4 c. mayonnaise
+    - 1/4 c. lemon juice
+    - 1/4 tsp. cayenne pepper
+- title: Guacamole
+  list:
+    - 3 ripe avocados
+    - 3 cloves of garlic, minced
+    - 1 jalepeno, minced
+    - 3 Tbsp. lemon juice
+    - 1 tsp. Tabasco
+    - 1/2 tsp. salt
+    - 1 dash of black pepper
+    - 2 green onions, chopped
+    - 2 Tbsp. cilantro, minced
+- title: Crab Topping
+  list:
+    - 2 cans crabmeat, drained
+    - 2 green onions, chopped
+    - 1 tomato, seeded and chopped
+    - 1/2 c. chopped red onion
+    - 1/4 c. lime juice
+    - 1 Tbsp. cilantro, minced
+    - 2 Tbsp. parsley, minced
 ---
 
 #### Base

@@ -262,7 +262,7 @@ body {
 }
 @media (min-width: 992px) {
   .recipe .ingredient-panel::before {
-    width: 33.3333%;
+    width: calc(33.3333% - var(--space-900) + var(--space-gutter));
     height: 100vh;
     position: fixed;
     top: 0;
@@ -272,6 +272,9 @@ body {
     background: inherit;
     content: "";
   }
+}
+.recipe .ingredient-panel h4 {
+  color: var(--color-text-on-dark);
 }
 .recipe .instructions-panel {
   grid-area: instr;

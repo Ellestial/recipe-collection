@@ -189,7 +189,7 @@
     &::before {
 
       @include breakpoint(md) {
-        width: 33.3333%;
+        width: calc(33.3333% - var(--space-900) + var(--space-gutter));
         height: 100vh;
         position: fixed;
         top: 0;
@@ -199,6 +199,10 @@
         background: inherit;
         content: '';
       }
+    }
+
+    h4 {
+      color: var(--color-text-on-dark);
     }
   }
 
