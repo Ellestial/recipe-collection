@@ -40,28 +40,30 @@ layout: base.liquid
   </div>
 
   <section class="ingredient-panel panel">
-    <h3 class="header-secondary">Ingredients</h3>
-    {% if ingredients[0].title %}
-      {% for section in ingredients %}
-        <h4>{{ section.title }}</h4>
+    <div class="ingredient-panel__content">
+      <h3 class="header-secondary">Ingredients</h3>
+      {% if ingredients[0].title %}
+        {% for section in ingredients %}
+          <h4>{{ section.title }}</h4>
+          <ul>
+            {% for ingredient in section.list %}
+              <li>{{ ingredient }}</li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      {% else %}
         <ul>
-          {% for ingredient in section.list %}
+          {% for ingredient in ingredients %}
             <li>{{ ingredient }}</li>
           {% endfor %}
         </ul>
-      {% endfor %}
-    {% else %}
-      <ul>
-        {% for ingredient in ingredients %}
-          <li>{{ ingredient }}</li>
-        {% endfor %}
-      </ul>
       {% endif %}
+    </div>
   </section>
 
   <section class="instructions-panel panel">
     <h3 class="header-secondary">Instructions</h3>
-    <div>{{content | safe }}</div>
+    <div class="instructions-panel__content">{{content | safe }}</div>
   </section>
 
   {% if nutrition %}

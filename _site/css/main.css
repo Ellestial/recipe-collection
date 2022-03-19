@@ -93,15 +93,11 @@ body {
   border-bottom: 1px solid;
 }
 
-.recipe {
-  padding: var(--space-900) var(--space-900) 0;
-}
 @media (min-width: 992px) {
   .recipe {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "intro intro intro" "ingre instr instr" "ingre nutri nutri";
-    grid-gap: var(--space-gutter);
   }
 }
 .recipe[data-category=category-appetizer] {
@@ -233,6 +229,10 @@ body {
 .recipe .intro-banner__difficulty-icon {
   background: url("../assets/icons/icon-difficulty.svg") center center no-repeat var(--color-bg);
 }
+.recipe .ingredient-panel,
+.recipe .instructions-panel {
+  padding: var(--space-900);
+}
 .recipe .ingredient-panel h4,
 .recipe .instructions-panel h4 {
   margin-bottom: var(--space-300);
@@ -256,16 +256,17 @@ body {
   font-weight: bold;
 }
 .recipe .ingredient-panel {
+  position: relative;
   grid-area: ingre;
   background: var(--color-secondary);
   color: #fff;
 }
 @media (min-width: 992px) {
   .recipe .ingredient-panel::before {
-    width: calc(33.3333% - var(--space-900) + var(--space-gutter));
+    width: 100%;
     height: 100vh;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    bottom: 100%;
     left: 0;
     z-index: -1;
     pointer-events: none;
@@ -273,11 +274,20 @@ body {
     content: "";
   }
 }
+@media (min-width: 992px) {
+  .recipe .ingredient-panel .ingredient-panel__content {
+    position: sticky;
+    top: var(--space-900);
+  }
+}
 .recipe .ingredient-panel h4 {
   color: var(--color-text-on-dark);
 }
 .recipe .instructions-panel {
   grid-area: instr;
+}
+.recipe .instructions-panel .instructions-panel__content {
+  max-width: 900px;
 }
 .recipe .instructions-panel ol {
   counter-reset: section;
@@ -298,7 +308,7 @@ body {
 }
 .recipe .nutrition-panel {
   grid-area: nutri;
-  padding: var(--space-500);
+  padding: var(--space-900);
   background: var(--color-bg-shade);
 }
 .recipe .nutrition-panel .nutrition-panel__content {
