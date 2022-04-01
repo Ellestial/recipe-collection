@@ -53,10 +53,11 @@ ingredients:
     - 2 cans crabmeat, drained
     - 2 green onions, chopped
     - 1 tomato, seeded and chopped
-    - 1/2 c. chopped red onion
+    - ½ c. chopped red onion
     - 1/4 c. lime juice
     - 1 Tbsp. cilantro, minced
     - 2 Tbsp. parsley, minced
+
 ---
 
 #### Base

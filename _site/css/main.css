@@ -56,14 +56,24 @@
   --font-size-subheader-lg: 49px;
   --font-size-subheader-sm: 32px;
   --font-size-body: 26px;
-  --space-900: 2.5rem;
-  --space-700: 1.75rem;
-  --space-500: 1rem;
-  --space-300: 0.75rem;
-  --space-100: 0.25rem;
-  --space-gutter: 2rem;
+  --space-900: 0.125rem;
+  --space-700: 1.25rem;
+  --space-500: 0.75rem;
+  --space-300: 0.5rem;
+  --space-100: 0.125rem;
+  --space-gutter: 1.25rem;
   --shadow: 4px 4px 0 var(--color-yellow-100);
   --shadow-dark: 4px 4px 0 var(--color-yellow-500);
+}
+@media (min-width: 992px) {
+  :root {
+    --space-900: 2.5rem;
+    --space-700: 1.75rem;
+    --space-500: 1rem;
+    --space-300: 0.75rem;
+    --space-100: 0.25rem;
+    --space-gutter: 2rem;
+  }
 }
 
 .btn {
@@ -88,6 +98,7 @@ body {
 }
 
 .header-secondary {
+  margin-bottom: var(--space-900);
   font: var(--font-size-header-sm) var(--font-family-header);
   text-transform: uppercase;
   border-bottom: 1px solid;
@@ -239,8 +250,8 @@ body {
   font: var(--font-size-subheader-lg) var(--font-family-subheader);
   color: var(--color-secondary);
 }
-.recipe .ingredient-panel h4:not(:first-child),
-.recipe .instructions-panel h4:not(:first-child) {
+.recipe .ingredient-panel h4:not(:first-of-type),
+.recipe .instructions-panel h4:not(:first-of-type) {
   margin-top: var(--space-700);
 }
 .recipe .ingredient-panel ul li:not(:last-child),

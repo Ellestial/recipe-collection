@@ -7,6 +7,7 @@ body {
 }
 
 .header-secondary {
+  margin-bottom: var(--space-900);
   font: var(--font-size-header-sm) var(--font-family-header);
   text-transform: uppercase;
   border-bottom: 1px solid;

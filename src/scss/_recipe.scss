@@ -159,7 +159,7 @@
       font: var(--font-size-subheader-lg) var(--font-family-subheader);
       color: var(--color-secondary);
 
-      &:not(:first-child) {
+      &:not(:first-of-type) {
         margin-top: var(--space-700);
       }
     }
