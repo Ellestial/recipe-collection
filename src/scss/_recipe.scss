@@ -1,8 +1,15 @@
 
 .recipe {
+  display: grid;
+  grid-template-areas:
+  "intro"
+  "ingre"
+  "instr"
+  "nutri";
+  grid-gap: var(--space-layout-gutter);
+  margin: var(--space-layout-margin) var(--space-layout-margin) 0;
 
   @include breakpoint(md) {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
     "intro intro intro"
@@ -22,23 +29,34 @@
     }
   }
 
+  // intro banner
+  //-------------------------
   .intro-banner {
+    display: grid;
     grid-area: intro;
+    grid-gap: var(--space-layout-gutter);
 
     @include breakpoint(md) {
-      display: grid;
       align-items: center;
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: var(--space-gutter);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
+  // banner image
   .intro-banner__hero-wrapper {
     position: relative;
+    height: clamp(200px, 40vw, 350px);
+    max-height: calc(100vh - 5rem);
 
     @include breakpoint(md) {
-      grid-column: 1 / 3;
+      height: 100%;
     }
+  }
+
+  .intro-banner__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .intro-banner__img-credit {
@@ -51,20 +69,11 @@
     font-family: var(--font-family-subheader);
   }
 
-  .intro-banner__content {
-
-    @include breakpoint(md) {
-      grid-column: 3 / 6;
-    }
-  }
-
   .intro-banner__links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: var(--space-300);
-
-    @include breakpoint(md) {
-      display: flex;
-      justify-content: space-between;
-    }
 
     span {
       font-family: var(--font-family-subheader);
@@ -73,7 +82,7 @@
   }
 
   .intro-banner__title {
-    margin: var(--space-900) 0;
+    margin-bottom: calc(var(--space-700) * 2);
     padding: var(--space-700) 0 var(--space-500);
     font: var(--font-size-header-lg) var(--font-family-header);
     text-transform: uppercase;
@@ -83,24 +92,16 @@
     line-height: 1;
   }
 
+  // banner quick facts
   .intro-banner__quick-facts {
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-gap: 0 var(--space-gutter);
-    grid-template-areas:
-    "serv"
-    "time"
-    "diff";
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--space-layout-gutter);
     text-align: center;
-
-    @include breakpoint(md) {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-      "serv time diff";
-    }
   }
 
   .intro-banner__quick-fact {
+    display: block;
     padding: var(--space-300);
     border: 1px solid;
     font: var(--font-size-header-sm) var(--font-family-header);
@@ -111,48 +112,42 @@
     }
 
     span {
-      width: 75px;
-      height: 73px;
+      width: 30px;
+      height: 40px;
       display: block;
-      margin: -45px auto 0;
+      margin: -30px auto 0;
       padding: 0 var(--space-300);
+
+      @include breakpoint(md) {
+        width: 75px;
+        height: 73px;
+        margin: -45px auto 0;
+      }
     }
 
     em {
       display: block;
+      margin-right: auto;
       font: var(--font-size-subheader-sm) var(--font-family-subheader);
       text-shadow: none;
       color: var(--color-secondary);
     }
   }
 
-  .intro-banner__servings {
-    grid-area: serv;
-  }
-
-  .intro-banner__time {
-    grid-area: time;
-  }
-
-  .intro-banner__diff {
-    grid-area: diff;
-  }
-
   .intro-banner__servings-icon {
-    background: url('../assets/icons/icon-servings.svg') center center no-repeat var(--color-bg);
+    background: url('../assets/icons/icon-servings.svg') center center/contain no-repeat var(--color-bg);
   }
 
   .intro-banner__time-icon {
-    background: url('../assets/icons/icon-time.svg') center center no-repeat var(--color-bg);
+    background: url('../assets/icons/icon-time.svg') center center/contain no-repeat var(--color-bg);
   }
 
   .intro-banner__difficulty-icon {
-    background: url('../assets/icons/icon-difficulty.svg') center center no-repeat var(--color-bg);
-  }
+    background: url('../assets/icons/icon-difficulty.svg') center center/contain no-repeat var(--color-bg);
+  } // end: intro banner
 
   .ingredient-panel,
   .instructions-panel {
-    padding: var(--space-900);
 
     h4 {
       margin-bottom: var(--space-300);
@@ -183,17 +178,24 @@
   .ingredient-panel {
     position: relative;
     grid-area: ingre;
+    margin: 0 calc(var(--space-layout-margin) * -1);
+    padding: var(--space-layout-gutter) var(--space-layout-margin);
     background: var(--color-secondary);
     color: #fff;
+
+    @include breakpoint(md) {
+      margin: 0;
+      padding: 0 var(--space-layout-gutter) var(--space-layout-gutter) 0;
+    }
 
     &::before {
 
       @include breakpoint(md) {
-        width: 100%;
-        height: 100vh;
+        width: calc(100% + calc(var(--space-layout-margin) * 2));
+        height: 200%;
         position: absolute;
-        bottom: 100%;
-        left: 0;
+        right: 0;
+        bottom: 0;
         z-index: -1;
         pointer-events: none;
         background: inherit;
@@ -232,9 +234,9 @@
         }
   
         &::before {
-          width: 60px;
+          width: 1em;
           flex-shrink: 0;
-          font: var(--font-size-subheader-lg) var(--font-family-header);
+          font: var(--font-size-header-sm) var(--font-family-header);
           counter-increment: section;
           shadow: var(--shadow-dark);
           content: counter(section) '.';
@@ -246,8 +248,13 @@
   // nutrition information
   .nutrition-panel {
     grid-area: nutri;
-    padding: var(--space-900);
+    margin: 0 calc(var(--space-layout-margin) * -1);
+    padding: var(--space-layout-gutter);
     background: var(--color-bg-shade);
+
+    @include breakpoint(md) {
+      margin: 0 calc(var(--space-layout-margin) * -1) 0 calc(var(--space-layout-gutter) * -1);
+    }
   
     .nutrition-panel__content {
       position: relative;

@@ -68,7 +68,5 @@ ingredients:
 1. Mix garlic, jalepeno, lemon juice, Tabasco, salt, pepper, and avocados in a bowl. Stir together until mostly smooth, but the avocado should still be somewhat chunky. Add green onions and cilantro.
 2. Spread on top of the cream cheese layer.
 
-![alt text](https://via.placeholder.com/500x200)
-
 #### Crab Topping
 1. Mix all crab topping ingredients together. Place on top of guacamole layer and gently press in. Chill. Serve with tortilla chips.
