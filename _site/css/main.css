@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Josefin+Slab:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 /**
  * @license
  * MyFonts Webfont Build ID 4268632, 2021-12-26T15:37:21-0500
@@ -48,14 +49,15 @@
   --color-bg: var(--color-yellow-100);
   --color-bg-shade: var(--color-yellow-300);
   --color-text-on-dark: var(--color-yellow-500);
+  --color-text-print: #000;
   --font-family-header: "Romes", serif;
   --font-family-subheader: "Caveat", serif;
-  --font-family-body: "Josefin Slab", sans-serif;
+  --font-family-body: "Work Sans", sans-serif;
   --font-size-header-lg: clamp(40px, 7vw, 94px);
   --font-size-header-sm: clamp(32px, 6vw, 62px);
   --font-size-subheader-lg: clamp(24px, 5vw, 36px);
   --font-size-subheader-sm: clamp(20px, 5vw, 32px);
-  --font-size-body: clamp(20px, 3vw, 28px);
+  --font-size-body: clamp(16px, 3vw, 20px);
   --space-900: 2rem;
   --space-700: 1.25rem;
   --space-500: 0.75rem;
@@ -66,7 +68,16 @@
   --shadow: 4px 4px 0 var(--color-yellow-100);
   --shadow-dark: 4px 4px 0 var(--color-yellow-500);
 }
-@media (min-width: 650px) {
+@media print {
+  :root {
+    --font-size-header-lg: 30pt;
+    --font-size-header-sm: 20pt;
+    --font-size-subheader-lg: 16pt;
+    --font-size-subheader-sm: 14pt;
+    --font-size-body: 11pt;
+  }
+}
+@media (min-width: 700px) {
   :root {
     --space-layout-gutter: 1.25rem;
     --space-layout-margin: 2rem;
@@ -90,14 +101,23 @@
 
 .btn--secondary {
   padding: var(--space-100) var(--space-500);
-  background: var(--color-primary);
+  font: bold 1.25rem/1 var(--font-family-body);
+  border: 1px solid var(--color-interactive);
+  background: transparent;
+  text-transform: uppercase;
   color: var(--color-interactive);
-  font: var(--font-size-body) var(--font-family-body);
-  border-radius: 20px;
-  border: 0;
-  box-shadow: var(--shadow-dark);
+  box-shadow: 4px 4px 0 var(--color-interactive);
 }
 
+@media print {
+  .btn--secondary {
+    font-weight: normal;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    color: var(--color-text-print);
+  }
+}
 body {
   background-color: var(--color-bg);
   color: var(--color-primary);
@@ -113,10 +133,18 @@ body {
 }
 
 .recipe {
+  max-width: 1700px;
   display: grid;
   grid-template-areas: "intro" "ingre" "instr" "nutri";
   grid-gap: var(--space-layout-gutter);
-  margin: var(--space-layout-margin) var(--space-layout-margin) 0;
+  margin: 0 auto;
+  padding: var(--space-layout-margin);
+}
+@media (min-width: 700px) {
+  .recipe {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "intro intro " "ingre instr " "nutri nutri";
+  }
 }
 @media (min-width: 992px) {
   .recipe {
@@ -149,6 +177,7 @@ body {
 }
 @media (min-width: 992px) {
   .recipe .intro-banner {
+    height: calc(100vh - var(--space-layout-margin) - var(--space-layout-margin));
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -156,11 +185,10 @@ body {
 .recipe .intro-banner__hero-wrapper {
   position: relative;
   height: clamp(200px, 40vw, 350px);
-  max-height: calc(100vh - 5rem);
 }
 @media (min-width: 992px) {
   .recipe .intro-banner__hero-wrapper {
-    height: 100%;
+    height: inherit;
   }
 }
 .recipe .intro-banner__img {
@@ -257,7 +285,7 @@ body {
 }
 .recipe .ingredient-panel ul li:not(:last-child),
 .recipe .instructions-panel ul li:not(:last-child) {
-  margin-bottom: var(--space-300);
+  margin-bottom: var(--space-500);
 }
 .recipe .ingredient-panel ul strong,
 .recipe .instructions-panel ul strong {
@@ -283,11 +311,11 @@ body {
 }
 @media (min-width: 992px) {
   .recipe .ingredient-panel::before {
-    width: calc(100% + var(--space-layout-margin) * 2);
+    width: calc(33.33vw + var(--space-layout-margin) * 2);
     height: 200%;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: calc(var(--space-layout-margin) * -1);
     z-index: -1;
     pointer-events: none;
     background: inherit;
@@ -334,7 +362,7 @@ body {
 }
 @media (min-width: 992px) {
   .recipe .nutrition-panel {
-    margin: 0 calc(var(--space-layout-margin) * -1) 0 calc(var(--space-layout-gutter) * -1);
+    margin: 0;
   }
 }
 .recipe .nutrition-panel .nutrition-panel__content {
@@ -382,6 +410,12 @@ body {
   font: var(--font-size-body) var(--font-family-subheader);
   color: var(--color-secondary);
   shadow: none;
+}
+
+@media print {
+  .recipe .panel h1, .recipe .panel h2, .recipe .panel h3, .recipe .panel h4, .recipe .panel h5, .recipe .panel h6 {
+    text-shadow: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

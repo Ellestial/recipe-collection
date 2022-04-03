@@ -5,10 +5,22 @@
 
 .btn--secondary {
   padding: var(--space-100) var(--space-500);
-  background: var(--color-primary);
+  font: bold 1.25rem/1 var(--font-family-body);
+  border: 1px solid var(--color-interactive);
+  background: transparent;
+  text-transform: uppercase;
   color: var(--color-interactive);
-  font: var(--font-size-body) var(--font-family-body);
-  border-radius: 20px;
-  border: 0;
-  box-shadow: var(--shadow-dark);
+  box-shadow: 4px 4px 0 var(--color-interactive);
+}
+
+
+@media print {
+
+  .btn--secondary {
+    font-weight: normal;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    color: var(--color-text-print);
+  }
 }

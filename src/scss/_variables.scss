@@ -30,18 +30,27 @@
   --color-bg: var(--color-yellow-100);
   --color-bg-shade: var(--color-yellow-300);
   --color-text-on-dark: var(--color-yellow-500);
+  --color-text-print: #000;
 
   // font family
   --font-family-header: 'Romes', serif;
   --font-family-subheader: 'Caveat', serif;
-  --font-family-body: 'Josefin Slab', sans-serif;
+  --font-family-body: 'Work Sans', sans-serif;
 
   // font size
   --font-size-header-lg: clamp(40px, 7vw, 94px);
   --font-size-header-sm: clamp(32px, 6vw, 62px);
   --font-size-subheader-lg: clamp(24px, 5vw, 36px);
   --font-size-subheader-sm: clamp(20px, 5vw, 32px);
-  --font-size-body: clamp(20px, 3vw, 28px);
+  --font-size-body: clamp(16px, 3vw, 20px);
+
+  @media print {
+    --font-size-header-lg: 30pt;
+    --font-size-header-sm: 20pt;
+    --font-size-subheader-lg: 16pt;
+    --font-size-subheader-sm: 14pt;
+    --font-size-body: 11pt;
+  }
 
   // spacing
   --space-900: #{pxToRem(32)};
