@@ -15,7 +15,7 @@ layout: base.liquid
       {% endif %}
     </div>
     <div class="intro-banner__content">
-      <button class="intro-banner__print btn--primary" onClick="window.print()">Print</button>
+      <button class="intro-banner__print btn--icon btn" onClick="window.print()">Print</button>
       <div class="intro-banner__links">
         <div class="intro-banner__source"><span>Source:</span> 
           {% if data.url %}
@@ -30,20 +30,20 @@ layout: base.liquid
       <div class="intro-banner__quick-facts">
         {% if data.servings %}
         <p class="intro-banner__servings intro-banner__quick-fact">
-          <span class="intro-banner__servings-icon"></span>
+          <span class="intro-banner__servings-icon intro-banner__icon"></span>
           <em>Servings</em> 
           {{data.servings}}</p>
         {% endif %}
 
         {% if data.time %}
         <p class="intro-banner__time intro-banner__quick-fact">
-          <span class="intro-banner__time-icon"></span>
+          <span class="intro-banner__time-icon intro-banner__icon"></span>
           <em>Time</em> {{data.time}}</p>
         {% endif %}
 
         {% if data.difficulty %}
         <p class="intro-banner__difficulty intro-banner__quick-fact" data-difficulty='{{data.difficulty}}'>
-          <span class="intro-banner__difficulty-icon"></span>
+          <span class="intro-banner__difficulty-icon intro-banner__icon"></span>
           <em>Difficulty</em> {{data.difficulty}}</p>
         {% endif %}
       </div>

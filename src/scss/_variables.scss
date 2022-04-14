@@ -29,7 +29,8 @@
   --color-interactive: var(--color-yellow-700);
   --color-bg: var(--color-yellow-100);
   --color-bg-shade: var(--color-yellow-300);
-  --color-text-on-dark: var(--color-yellow-500);
+  --color-body-text-on-dark: #fff;
+  --color-header-text-on-dark: var(--color-yellow-500);
   --color-text-print: #000;
 
   // font family
@@ -43,14 +44,6 @@
   --font-size-subheader-lg: clamp(24px, 5vw, 36px);
   --font-size-subheader-sm: clamp(20px, 5vw, 32px);
   --font-size-body: clamp(16px, 3vw, 20px);
-
-  @media print {
-    --font-size-header-lg: 30pt;
-    --font-size-header-sm: 20pt;
-    --font-size-subheader-lg: 16pt;
-    --font-size-subheader-sm: 14pt;
-    --font-size-body: 11pt;
-  }
 
   // spacing
   --space-900: #{pxToRem(32)};
@@ -79,4 +72,29 @@
   // misc
   --shadow: 4px 4px 0 var(--color-yellow-100);
   --shadow-dark: 4px 4px 0 var(--color-yellow-500);
+
+  // print styles
+  //-------------------------
+  @media print {
+    --color-gray: black;
+    --color-purple: black;
+    --color-moss: black;
+    --color-redwood: black;
+    --color-rose: black;
+    --color-slate: black;
+    --color-navy: black;
+  
+    --color-yellow-100: black;
+    --color-yellow-300: black;
+    --color-yellow-500: black;
+    --color-yellow-700: black;
+
+    --color-body-text-on-dark: black;
+
+    --font-size-header-lg: 30pt;
+    --font-size-header-sm: 20pt;
+    --font-size-subheader-lg: 16pt;
+    --font-size-subheader-sm: 14pt;
+    --font-size-body: 10pt;
+  }
 }

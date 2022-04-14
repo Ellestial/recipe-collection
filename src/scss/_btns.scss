@@ -1,22 +1,61 @@
 
 .btn {
+  font: var(--font-size-body) var(--font-family-body);
+  border: 0;
+  background: transparent;
   cursor: pointer;
 }
 
 .btn--secondary {
-  padding: var(--space-100) var(--space-500);
-  font: bold 1.25rem/1 var(--font-family-body);
-  border: 1px solid var(--color-interactive);
-  background: transparent;
-  text-transform: uppercase;
-  color: var(--color-interactive);
-  box-shadow: 4px 4px 0 var(--color-interactive);
+  padding: var(--space-100) var(--space-300);
+  border: 1px solid;
+  color: var(--color-gray);
+  text-decoration: none;
+  box-shadow: 4px 4px 0;
+  transition: all 250ms;
+
+  &:hover {
+    background: var(--color-interactive);
+  }
 }
 
+.btn--icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-interactive);
+  box-shadow: var(--shadow-dark);
+  font: 1.25rem/1 var(--font-family-subheader);
+  transition: all 250ms ease-out;
+
+  &:hover {
+    background: var(--color-gray);
+    color: var(--color-interactive);
+  }
+}
+
+.btn--link {
+  padding: var(--space-100);
+  font: italic 1.25rem/1 var(--font-family-body);
+  color: var(--color-gray);
+  background: linear-gradient(to right, var(--color-interactive) 0%, var(--color-interactive) 50%, var(--color-yellow-500) 50%);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  overflow: hidden;
+  background-size: 199% 100%;
+  transition: all 250ms ease-out;
+
+  &:hover {
+    background-position: -100% 0;
+  }
+}
 
 @media print {
 
-  .btn--secondary {
+  .btn {
     font-weight: normal;
     padding: 0;
     border: 0;
