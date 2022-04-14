@@ -3,11 +3,12 @@ title: Southwestern Grilled Chicken Salad with Tomato & Black Bean Salsa
 
 img:
   alt: The finished dish prepared on a plate. Lettuce with sliced avocado, tomatoes, black beans, and grilled chicken.
+  url: https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18195248/051106057-02-grilled-chicken-salad-recipe-main.jpg
   credit: Scott Phillips
 
 data:
   author: Fine Cooking
-  link: https://www.finecooking.com/recipe/southwestern-grilled-chicken-salad-with-tomato-and-black-bean-salsa
+  url: https://www.finecooking.com/recipe/southwestern-grilled-chicken-salad-with-tomato-and-black-bean-salsa
   category: entree
   servings: 4
   time: 45m

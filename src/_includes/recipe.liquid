@@ -6,15 +6,25 @@ layout: base.liquid
   <div class="intro-banner panel">
     <div class="intro-banner__hero-wrapper">
       {% if img.alt %}
+        {% if img.url %}
+        <img class="intro-banner__img" src="{{img.url}}" alt="{{img.alt}}" />
+        {% else %}
         <img class="intro-banner__img" src="../../assets/{{title|slug/}}.jpg" alt="{{img.alt}}" />
+        {% endif %}
         <div class="intro-banner__img-credit">Photo Credit: {{img.credit}}</div>
       {% endif %}
     </div>
     <div class="intro-banner__content">
-      <button onClick="window.print()">Print</button>
+      <button class="intro-banner__print btn--primary" onClick="window.print()">Print</button>
       <div class="intro-banner__links">
-        <div class="intro-banner__source"><span>Source:</span> <button class="intro-banner__source-btn btn--secondary btn">{{data.author}}</button></div>
-        <button class="intro-banner__category btn--secondary btn">{{data.category}}</button>
+        <div class="intro-banner__source"><span>Source:</span> 
+          {% if data.url %}
+            <a href="{{data.url}}" class="intro-banner__source-btn btn--secondary btn">{{data.author}}</a>
+          {% else if data.author %}
+            <span class="intro-banner__source-text">{{data.author}}</span>
+          {% endif %}
+        </div>
+        <p class="intro-banner__category">{{data.category}}</p>
       </div>
       <h2 class="intro-banner__title">{{title}}</h2>
       <div class="intro-banner__quick-facts">

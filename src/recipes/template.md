@@ -1,13 +1,13 @@
 ---
-title: Test
+title: 
 
 img:
-  url: 
   alt: 
   credit: 
 
 data:
   author: 
+  link: 
   category: 
   servings: 
   time: 
@@ -27,12 +27,13 @@ nutrition:
 
 tags:
 - example
+
+ingredients:
+- title: 
+  list:
+
 ---
 
-#### Optional Separater
-- **2** ingredient name
+#### Category
 
-<!-- excerpt -->
-
-#### Optional Separater
-1. Instructions
+1. Number

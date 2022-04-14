@@ -46,10 +46,14 @@
     grid-area: intro;
     grid-gap: var(--space-layout-gutter);
 
+    @include breakpoint(sm) {
+      margin-bottom: var(--space-layout-gutter);
+    }
+
     @include breakpoint(md) {
-      height: calc(100vh - var(--space-layout-margin) - var(--space-layout-margin));
-      align-items: center;
-      grid-template-columns: repeat(2, 1fr);
+      min-height: calc(100vh - var(--space-layout-gutter) - var(--space-layout-margin));
+      grid-template-columns: repeat(12, 1fr);
+      margin-bottom: 0;
     }
   }
 
@@ -57,9 +61,11 @@
   .intro-banner__hero-wrapper {
     position: relative;
     height: clamp(200px, 40vw, 350px);
+    background: var(--color-primary);
 
     @include breakpoint(md) {
       height: inherit;
+      grid-column: span 5;
     }
   }
 
@@ -79,21 +85,28 @@
     font-family: var(--font-family-subheader);
   }
 
+  .intro-banner__content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(md) {
+      grid-column: span 7;
+    }
+  }
+
   .intro-banner__links {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: var(--space-300);
-
-    span {
-      font-family: var(--font-family-subheader);
-      color: var(--color-secondary);
-    }
+    text-transform: capitalize;
   }
 
   .intro-banner__title {
-    margin-bottom: calc(var(--space-700) * 2);
-    padding: var(--space-700) 0 var(--space-500);
+    display: flex;
+    align-items: center;
+    flex: 1 0;
+    padding: var(--space-900) 0;
     font: var(--font-size-header-lg) var(--font-family-header);
     text-transform: uppercase;
     text-shadow: var(--shadow-dark);
@@ -106,14 +119,12 @@
   .intro-banner__quick-facts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: var(--space-layout-gutter);
     text-align: center;
   }
 
   .intro-banner__quick-fact {
     display: block;
     padding: var(--space-300);
-    border: 1px solid;
     font: var(--font-size-header-sm) var(--font-family-header);
     text-shadow: var(--shadow-dark);
 
@@ -121,17 +132,20 @@
       min-height: 160px;
     }
 
+    &:not(:last-child) {
+      border-right: 1px solid;
+    }
+
     span {
       width: 30px;
       height: 40px;
       display: block;
-      margin: -30px auto 0;
+      margin: 0 auto;
       padding: 0 var(--space-300);
 
       @include breakpoint(md) {
         width: 75px;
         height: 73px;
-        margin: -45px auto 0;
       }
     }
 
@@ -156,35 +170,24 @@
     background: url('../assets/icons/icon-difficulty.svg') center center/contain no-repeat var(--color-bg);
   } // end: intro banner
 
+
+  // ingredients & instructions
+  //-------------------------
   .ingredient-panel,
   .instructions-panel {
 
     h4 {
       margin-bottom: var(--space-300);
       font: var(--font-size-subheader-lg) var(--font-family-subheader);
-      color: var(--color-secondary);
 
       &:not(:first-of-type) {
         margin-top: var(--space-700);
       }
     }
+  } // end: ingredients & instructions
 
-    ul {
-
-      li:not(:last-child) {
-        margin-bottom: var(--space-500);
-      }
-
-      strong {
-        width: 55px;
-        display: inline-block;
-        margin-right: var(--space-500);
-        text-align: right;
-        font-weight: bold;
-      }
-    }
-  }
-
+  // ingredient panel
+  //-------------------------
   .ingredient-panel {
     position: relative;
     grid-area: ingre;
@@ -192,6 +195,10 @@
     padding: var(--space-layout-gutter) var(--space-layout-margin);
     background: var(--color-secondary);
     color: #fff;
+
+    @include breakpoint(sm) {
+      margin: calc(var(--space-layout-gutter) * -1) 0 0 calc(var(--space-layout-margin) * -1);
+    }
 
     @include breakpoint(md) {
       margin: 0;
@@ -213,24 +220,29 @@
       }
     }
 
-    .ingredient-panel__content {
-
-      @include breakpoint(md) {
-        position: sticky;
-        top: var(--space-900);
-      }
-    }
-
     h4 {
       color: var(--color-text-on-dark);
     }
-  }
 
+    ul {
+
+      li:not(:last-child) {
+        margin-bottom: var(--space-500);
+      }
+    }
+  } // end: ingredients panel
+
+  // instructions panel
+  //-------------------------
   .instructions-panel {
     grid-area: instr;
 
     .instructions-panel__content {
       max-width: 900px;
+    }
+
+    h4 {
+      color: var(--color-secondary);
     }
 
     ol {
@@ -248,14 +260,15 @@
           flex-shrink: 0;
           font: var(--font-size-header-sm) var(--font-family-header);
           counter-increment: section;
-          shadow: var(--shadow-dark);
+          text-shadow: var(--shadow-dark);
           content: counter(section) '.';
         }
       }
     }
-  }
-  
-  // nutrition information
+  } // end: instructions panel
+
+  // nutrition panel
+  //-------------------------
   .nutrition-panel {
     grid-area: nutri;
     margin: 0 calc(var(--space-layout-margin) * -1);
@@ -278,8 +291,8 @@
     }
   
     ul {
-      display: grid;
-      grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       grid-gap: 0 var(--space-500);
     }
   
@@ -296,7 +309,7 @@
       padding: var(--space-700);
       text-align: center;
       font: var(--font-size-header-sm) var(--font-family-header);
-      shadow: var(--shadow);
+      text-shadow: var(--shadow);
   
       em {
         margin-left: var(--space-300);
@@ -311,25 +324,29 @@
       padding: var(--space-500) 0;
       font: var(--font-size-subheader-sm) var(--font-family-header);
       border-bottom: 1px solid;
-      shadow: var(--shadow);
+      text-shadow: var(--shadow);
   
       em {
         font: var(--font-size-body) var(--font-family-subheader);
         color: var(--color-secondary);
-        shadow: none;
+        text-shadow: none;
       }
     }
-  }
+  } // end: nutrition panel
 }
 
 @media print {
   .recipe {
 
-    .panel {
+    --shadow: none;
+    --shadow-dark: none;
 
-      h1, h2, h3, h4, h5, h6 {
-        text-shadow: none;
-      }
+    .intro-banner__print {
+      display: none;
+    }
+
+    .intro-banner__hero-wrapper {
+      display: none;
     }
   }
 }
