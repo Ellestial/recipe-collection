@@ -7,15 +7,15 @@
   "ingre"
   "instr"
   "nutri";
-  grid-gap: var(--space-layout-gutter);
+  grid-gap: var(--space-gap);
   margin: 0 auto;
-  padding: var(--space-layout-margin);
+  padding: var(--space-gap);
 
   @include breakpoint(sm) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-    "intro intro "
-    "ingre instr "
+    "intro intro"
+    "ingre instr"
     "nutri nutri";
   }
 
@@ -44,14 +44,14 @@
   .intro-banner {
     display: grid;
     grid-area: intro;
-    grid-gap: var(--space-layout-gutter);
+    grid-gap: var(--space-gap);
 
     @include breakpoint(sm) {
-      margin-bottom: var(--space-layout-gutter);
+      margin-bottom: var(--space-gap);
     }
 
     @include breakpoint(md) {
-      min-height: calc(100vh - var(--space-layout-gutter) - var(--space-layout-margin));
+      min-height: calc(100vh - var(--space-gap) - var(--space-gap));
       grid-template-columns: repeat(12, 1fr);
       margin-bottom: 0;
     }
@@ -195,28 +195,28 @@
   .ingredient-panel {
     position: relative;
     grid-area: ingre;
-    margin: 0 calc(var(--space-layout-margin) * -1);
-    padding: var(--space-layout-gutter) var(--space-layout-margin);
+    margin: 0 calc(var(--space-gap) * -1);
+    padding: var(--space-gap) var(--space-gap);
     background: var(--color-secondary);
     color: var(--color-body-text-on-dark);
 
     @include breakpoint(sm) {
-      margin: calc(var(--space-layout-gutter) * -1) 0 0 calc(var(--space-layout-margin) * -1);
+      margin: calc(var(--space-gap) * -1) 0 0 calc(var(--space-gap) * -1);
     }
 
     @include breakpoint(md) {
       margin: 0;
-      padding: 0 var(--space-layout-gutter) var(--space-layout-gutter) 0;
+      padding: 0 var(--space-gap) var(--space-gap) 0;
     }
 
     &::before {
 
       @include breakpoint(md) {
-        width: calc(33.33vw + calc(var(--space-layout-margin) * 2));
+        width: calc(33.33vw + calc(var(--space-gap) * 2));
         height: 200%;
         position: absolute;
         right: 0;
-        bottom: calc(var(--space-layout-margin) * -1);
+        bottom: calc(var(--space-gap) * -1);
         z-index: -1;
         pointer-events: none;
         background: inherit;
@@ -275,8 +275,8 @@
   //-------------------------
   .nutrition-panel {
     grid-area: nutri;
-    margin: 0 calc(var(--space-layout-margin) * -1);
-    padding: var(--space-layout-gutter);
+    margin: 0 calc(var(--space-gap) * -1);
+    padding: var(--space-gap);
     background: var(--color-bg-shade);
 
     @include breakpoint(md) {
@@ -287,37 +287,30 @@
       position: relative;
     }
   
-    h3 {
-  
-      @include breakpoint(md) {
-        width: 50%;
-      }
-    }
-  
     ul {
       display: grid;
-      grid-auto-columns: minmax(200px, 400px);
+      grid-template-columns: repeat(3, 1fr);
       gap: 0 var(--space-500);
+
+      @include breakpoint(xl) {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
   }
 
   .nutrition-panel__callout {
-    width: 43%;
-    min-height: 84px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    grid-row: span 6;
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid;
-    padding: var(--space-700);
+    padding: var(--space-300);
     text-align: center;
     font: var(--font-size-header-sm) var(--font-family-header);
     text-shadow: var(--shadow);
-
+  
     em {
-      margin-left: var(--space-300);
       font: var(--font-size-subheader-lg) var(--font-family-subheader);
     }
   }
@@ -366,7 +359,7 @@
     }
 
     .intro-banner__quick-facts {
-      gap: var(--space-layout-gutter);
+      gap: var(--space-gap);
       border-bottom: 1px solid;
     }
 
@@ -374,17 +367,19 @@
       display: flex;
       align-items: center;
       min-height: auto;
+      padding-left: 0;
+      padding-right: var(--space-gap);
       font: var(--font-size-subheader-sm) var(--font-family-header);
     }
 
     .instructions-panel {
-      width: 60%;
-      padding-left: var(--space-layout-gutter);
+      flex: 3 0;
+      padding-left: var(--space-gap);
       border-left: 1px solid;
     }
 
     .ingredient-panel {
-      width: 33.33%;
+      flex: 1 0;
       margin: 0;
       padding: 0;
     }

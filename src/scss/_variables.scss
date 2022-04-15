@@ -39,8 +39,8 @@
   --font-family-body: 'Work Sans', sans-serif;
 
   // font size
-  --font-size-header-lg: clamp(40px, 7vw, 94px);
-  --font-size-header-sm: clamp(32px, 6vw, 62px);
+  --font-size-header-lg: clamp(40px, 6vw, 94px);
+  --font-size-header-sm: clamp(32px, 5vw, 62px);
   --font-size-subheader-lg: clamp(24px, 5vw, 36px);
   --font-size-subheader-sm: clamp(20px, 5vw, 32px);
   --font-size-body: clamp(16px, 3vw, 20px);
@@ -51,12 +51,12 @@
   --space-500: #{pxToRem(12)};
   --space-300: #{pxToRem(8)};
   --space-100: #{pxToRem(2)};
-  --space-layout-gutter: #{pxToRem(12)};
-  --space-layout-margin: #{pxToRem(20)};
+  --space-gap: #{pxToRem(12)};
+  --space-gap: #{pxToRem(20)};
 
   @include breakpoint(sm) {
-    --space-layout-gutter: #{pxToRem(20)};
-    --space-layout-margin: #{pxToRem(32)};
+    --space-gap: #{pxToRem(20)};
+    --space-gap: #{pxToRem(32)};
   }
 
   @include breakpoint(lg) {
@@ -65,8 +65,8 @@
     --space-500: #{pxToRem(16)};
     --space-300: #{pxToRem(12)};
     --space-100: #{pxToRem(4)};
-    --space-layout-gutter: #{pxToRem(32)};
-    --space-layout-margin: #{pxToRem(44)};
+    --space-gap: #{pxToRem(32)};
+    --space-gap: #{pxToRem(44)};
   }
 
   // misc
@@ -95,6 +95,6 @@
     --font-size-header-sm: 20pt;
     --font-size-subheader-lg: 16pt;
     --font-size-subheader-sm: 14pt;
-    --font-size-body: 10pt;
+    --font-size-body: 9pt;
   }
 }
