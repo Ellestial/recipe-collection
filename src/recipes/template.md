@@ -2,12 +2,13 @@
 title: 
 
 img:
+  url: 
   alt: 
   credit: 
 
 data:
   author: 
-  link: 
+  url: 
   category: 
   servings: 
   time: 

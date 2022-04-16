@@ -39,7 +39,7 @@
   --color-yellow-700: #f5c109;
   --color-primary: var(--color-gray);
   --color-secondary: unset;
-  --color-secondary-breakfast: var(--color-dark-blue);
+  --color-secondary-breakfast: var(--color-navy);
   --color-secondary-appetizer: var(--color-slate);
   --color-secondary-entree: var(--color-redwood);
   --color-secondary-side: var(--color-moss);
@@ -372,7 +372,7 @@ body {
 @media (min-width: 992px) {
   .recipe .ingredient-panel::before {
     width: calc(33.33vw + var(--space-gap) * 2);
-    height: 200%;
+    height: 300%;
     position: absolute;
     right: 0;
     bottom: calc(var(--space-gap) * -1);
@@ -475,9 +475,6 @@ body {
     width: 100%;
   }
   .recipe .intro-banner__print {
-    display: none;
-  }
-  .recipe .intro-banner__hero-wrapper {
     display: none;
   }
   .recipe .intro-banner__icon {

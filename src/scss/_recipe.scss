@@ -213,7 +213,7 @@
 
       @include breakpoint(md) {
         width: calc(33.33vw + calc(var(--space-gap) * 2));
-        height: 200%;
+        height: 300%;
         position: absolute;
         right: 0;
         bottom: calc(var(--space-gap) * -1);
@@ -347,10 +347,6 @@
     }
 
     .intro-banner__print {
-      display: none;
-    }
-
-    .intro-banner__hero-wrapper {
       display: none;
     }
 

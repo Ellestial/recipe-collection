@@ -19,7 +19,7 @@ layout: base.liquid
       <div class="intro-banner__links">
         <div class="intro-banner__source"><span>Source:</span> 
           {% if data.url %}
-            <a href="{{data.url}}" class="intro-banner__source-btn btn--secondary btn">{{data.author}}</a>
+            <a href="{{data.url}}" target="_blank" class="intro-banner__source-btn btn--secondary btn">{{data.author}}</a>
           {% else if data.author %}
             <span class="intro-banner__source-text">{{data.author}}</span>
           {% endif %}
