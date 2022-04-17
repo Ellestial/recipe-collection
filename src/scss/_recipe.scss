@@ -292,7 +292,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 0 var(--space-500);
 
-      @include breakpoint(xl) {
+      @include breakpoint(lg) {
         grid-template-columns: repeat(4, 1fr);
       }
     }
@@ -300,7 +300,6 @@
 
   .nutrition-panel__callout {
     grid-row: span 6;
-    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -341,9 +340,25 @@
 
     --shadow: none;
     --shadow-dark: none;
+    --space-900: #{pxToRem(16)};
+    --space-gap: #{pxToRem(16)};
 
     .intro-banner {
       width: 100%;
+      display: flex;
+    }
+
+    .intro-banner__hero-wrapper {
+      max-height: 225px;
+      flex: 1 0;
+    }
+
+    .intro-banner__img-credit {
+      display: none;
+    }
+
+    .intro-banner__content {
+      flex: 3 0;
     }
 
     .intro-banner__print {
@@ -378,6 +393,14 @@
       flex: 1 0;
       margin: 0;
       padding: 0;
+    }
+
+    .nutrition-panel {
+      width: 100%;
+      
+      ul {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
   
     .nutrition-panel__item {

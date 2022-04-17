@@ -2,6 +2,11 @@
 
 :root {
 
+  // breakpoints
+  --breakpoint-sm: 700px;
+  --breakpoint-md: 992px;
+  --breakpoint-lg: 1200px;
+
   // color tokens
   --color-gray: #393232;
   --color-purple: #87738b;

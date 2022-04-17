@@ -26,6 +26,9 @@
   src: url("../assets/fonts/romes.woff2") format("woff2"), url("../assets/fonts/romes.woff") format("woff");
 }
 :root {
+  --breakpoint-sm: 700px;
+  --breakpoint-md: 992px;
+  --breakpoint-lg: 1200px;
   --color-gray: #393232;
   --color-purple: #87738b;
   --color-moss: #809848;
@@ -433,9 +436,13 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 0 var(--space-500);
 }
+@media (min-width: 1200px) {
+  .recipe .nutrition-panel ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .recipe .nutrition-panel__callout {
   grid-row: span 6;
-  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -470,9 +477,22 @@ body {
     --color-secondary: black !important;
     --shadow: none;
     --shadow-dark: none;
+    --space-900: 1rem;
+    --space-gap: 1rem;
   }
   .recipe .intro-banner {
     width: 100%;
+    display: flex;
+  }
+  .recipe .intro-banner__hero-wrapper {
+    max-height: 225px;
+    flex: 1 0;
+  }
+  .recipe .intro-banner__img-credit {
+    display: none;
+  }
+  .recipe .intro-banner__content {
+    flex: 3 0;
   }
   .recipe .intro-banner__print {
     display: none;
@@ -501,6 +521,12 @@ body {
     flex: 1 0;
     margin: 0;
     padding: 0;
+  }
+  .recipe .nutrition-panel {
+    width: 100%;
+  }
+  .recipe .nutrition-panel ul {
+    grid-template-columns: repeat(4, 1fr);
   }
   .recipe .nutrition-panel__item {
     padding: var(--space-100) 0;
