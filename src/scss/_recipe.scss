@@ -341,6 +341,7 @@
     --shadow: none;
     --shadow-dark: none;
     --space-900: #{pxToRem(16)};
+    --space-500: #{pxToRem(8)};
     --space-gap: #{pxToRem(16)};
 
     .intro-banner {
@@ -358,7 +359,7 @@
     }
 
     .intro-banner__content {
-      flex: 3 0;
+      flex: 2 0;
     }
 
     .intro-banner__print {
@@ -384,7 +385,7 @@
     }
 
     .instructions-panel {
-      flex: 3 0;
+      flex: 2 0;
       padding-left: var(--space-gap);
       border-left: 1px solid;
     }
@@ -397,6 +398,7 @@
 
     .nutrition-panel {
       width: 100%;
+      break-inside: avoid;
       
       ul {
         grid-template-columns: repeat(4, 1fr);

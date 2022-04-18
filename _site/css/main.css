@@ -478,6 +478,7 @@ body {
     --shadow: none;
     --shadow-dark: none;
     --space-900: 1rem;
+    --space-500: 0.5rem;
     --space-gap: 1rem;
   }
   .recipe .intro-banner {
@@ -492,7 +493,7 @@ body {
     display: none;
   }
   .recipe .intro-banner__content {
-    flex: 3 0;
+    flex: 2 0;
   }
   .recipe .intro-banner__print {
     display: none;
@@ -513,7 +514,7 @@ body {
     font: var(--font-size-subheader-sm) var(--font-family-header);
   }
   .recipe .instructions-panel {
-    flex: 3 0;
+    flex: 2 0;
     padding-left: var(--space-gap);
     border-left: 1px solid;
   }
@@ -524,6 +525,7 @@ body {
   }
   .recipe .nutrition-panel {
     width: 100%;
+    break-inside: avoid;
   }
   .recipe .nutrition-panel ul {
     grid-template-columns: repeat(4, 1fr);
