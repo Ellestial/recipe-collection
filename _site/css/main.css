@@ -322,6 +322,53 @@ body {
   text-shadow: none;
   color: var(--color-secondary);
 }
+.recipe .star {
+  fill: var(--color-bg);
+  filter: drop-shadow(4px 4px 0 var(--color-yellow-500));
+}
+.recipe [data-difficulty="0"] svg #star-1-half,
+.recipe [data-difficulty="0"] svg #star-2-half,
+.recipe [data-difficulty="0"] svg #star-3-half {
+  stroke-width: 0;
+}
+.recipe [data-difficulty="0.5"] svg #star-1-half {
+  fill: var(--color-primary);
+}
+.recipe [data-difficulty="0.5"] svg #star-2-half,
+.recipe [data-difficulty="0.5"] svg #star-3-half {
+  stroke-width: 0;
+}
+.recipe [data-difficulty="1"] svg #star-1-whole {
+  fill: var(--color-primary);
+}
+.recipe [data-difficulty="1"] svg #star-2-half,
+.recipe [data-difficulty="1"] svg #star-3-half {
+  stroke-width: 0;
+}
+.recipe [data-difficulty="1.5"] svg #star-1-whole,
+.recipe [data-difficulty="1.5"] svg #star-2-half {
+  fill: var(--color-primary);
+}
+.recipe [data-difficulty="1.5"] svg #star-3-half {
+  stroke-width: 0;
+}
+.recipe [data-difficulty="2"] svg #star-1-whole,
+.recipe [data-difficulty="2"] svg #star-2-whole {
+  fill: var(--color-primary);
+}
+.recipe [data-difficulty="2"] svg #star-3-half {
+  stroke-width: 0;
+}
+.recipe [data-difficulty="2.5"] svg #star-1-whole,
+.recipe [data-difficulty="2.5"] svg #star-2-whole,
+.recipe [data-difficulty="2.5"] svg #star-3-half {
+  fill: var(--color-primary);
+}
+.recipe [data-difficulty="3"] svg #star-1-whole,
+.recipe [data-difficulty="3"] svg #star-2-whole,
+.recipe [data-difficulty="3"] svg #star-3-whole {
+  fill: var(--color-primary);
+}
 .recipe .intro-banner__icon {
   width: 30px;
   height: 40px;
@@ -528,7 +575,10 @@ body {
     break-inside: avoid;
   }
   .recipe .nutrition-panel ul {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .recipe .nutrition-panel__callout {
+    grid-column: span 2;
   }
   .recipe .nutrition-panel__item {
     padding: var(--space-100) 0;

@@ -12,18 +12,6 @@ data:
   time: 30m
   difficulty: 1.5
 
-nutrition:
-  calories: 200
-  totalFat: 8
-  saturatedFat: 1
-  transFat: 0
-  cholesterol: 0
-  carbs: 54
-  sodium: 150
-  sugar: 3
-  protein: 4
-  fiber: 4
-
 tags:
 - guacamole
 - crab
