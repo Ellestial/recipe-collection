@@ -12,7 +12,7 @@ data:
   category: entree
   servings: 4
   time: 45m
-  difficulty: 1.5
+  difficulty: 2
 
 nutrition:
   calories: 470

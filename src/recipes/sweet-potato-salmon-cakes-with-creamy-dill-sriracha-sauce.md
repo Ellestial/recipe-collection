@@ -12,7 +12,7 @@ data:
   category: entree
   servings: 7
   time: 40m
-  difficulty: 1.5
+  difficulty: 1
 
 nutrition:
   calories: 135
@@ -80,5 +80,6 @@ ingredients:
 3. Remove from oven and toss in 1/2 tablespoon olive oil, balsamic vinegar and maple syrup. Serve immediately.
 
 #### Notes
-- *Alternatively, use 2 (5 ounce) cans salmon or tuna. The salmon is to be cooked before making patties. I pan-seared my salmon according to the method, detailed in this recipe. It makes for such wonderful salmon. I did not use the seasoning recipe in the recipe, but only seasoned with garlic powder, salt and pepper. 
-- **Roast sweet potato at 400ºF. for about 45-60 mins and until soft.
+*Alternatively, use 2 (5 ounce) cans salmon or tuna. The salmon is to be cooked before making patties. I pan-seared my salmon according to the method, detailed in this recipe. It makes for such wonderful salmon. I did not use the seasoning recipe in the recipe, but only seasoned with garlic powder, salt and pepper. 
+
+**Roast sweet potato at 400ºF. for about 45-60 mins and until soft.

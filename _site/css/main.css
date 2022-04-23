@@ -178,6 +178,10 @@ body {
   line-height: 1.2;
 }
 
+p:not(:last-child) {
+  margin-bottom: var(--space-500);
+}
+
 .header-secondary {
   margin-bottom: var(--space-900);
   font: var(--font-size-header-sm) var(--font-family-header);
@@ -323,54 +327,23 @@ body {
   color: var(--color-secondary);
 }
 .recipe .star {
-  fill: var(--color-bg);
+  fill: transparent;
   filter: drop-shadow(4px 4px 0 var(--color-yellow-500));
 }
-.recipe [data-difficulty="0"] svg #star-1-half,
-.recipe [data-difficulty="0"] svg #star-2-half,
-.recipe [data-difficulty="0"] svg #star-3-half {
-  stroke-width: 0;
-}
-.recipe [data-difficulty="0.5"] svg #star-1-half {
+.recipe [data-difficulty="1"] svg #star-1 {
   fill: var(--color-primary);
 }
-.recipe [data-difficulty="0.5"] svg #star-2-half,
-.recipe [data-difficulty="0.5"] svg #star-3-half {
-  stroke-width: 0;
-}
-.recipe [data-difficulty="1"] svg #star-1-whole {
+.recipe [data-difficulty="2"] svg #star-1,
+.recipe [data-difficulty="2"] svg #star-2 {
   fill: var(--color-primary);
 }
-.recipe [data-difficulty="1"] svg #star-2-half,
-.recipe [data-difficulty="1"] svg #star-3-half {
-  stroke-width: 0;
-}
-.recipe [data-difficulty="1.5"] svg #star-1-whole,
-.recipe [data-difficulty="1.5"] svg #star-2-half {
-  fill: var(--color-primary);
-}
-.recipe [data-difficulty="1.5"] svg #star-3-half {
-  stroke-width: 0;
-}
-.recipe [data-difficulty="2"] svg #star-1-whole,
-.recipe [data-difficulty="2"] svg #star-2-whole {
-  fill: var(--color-primary);
-}
-.recipe [data-difficulty="2"] svg #star-3-half {
-  stroke-width: 0;
-}
-.recipe [data-difficulty="2.5"] svg #star-1-whole,
-.recipe [data-difficulty="2.5"] svg #star-2-whole,
-.recipe [data-difficulty="2.5"] svg #star-3-half {
-  fill: var(--color-primary);
-}
-.recipe [data-difficulty="3"] svg #star-1-whole,
-.recipe [data-difficulty="3"] svg #star-2-whole,
-.recipe [data-difficulty="3"] svg #star-3-whole {
+.recipe [data-difficulty="3"] svg #star-1,
+.recipe [data-difficulty="3"] svg #star-2,
+.recipe [data-difficulty="3"] svg #star-3 {
   fill: var(--color-primary);
 }
 .recipe .intro-banner__icon {
-  width: 30px;
+  width: 40px;
   height: 40px;
   display: block;
   margin: 0 auto;
@@ -378,18 +351,21 @@ body {
 }
 @media (min-width: 992px) {
   .recipe .intro-banner__icon {
-    width: 75px;
-    height: 73px;
+    width: 70px;
+    height: 70px;
   }
 }
 .recipe .intro-banner__servings-icon {
-  background: url("../assets/icons/icon-servings.svg") center center/contain no-repeat var(--color-bg);
+  background: url("../assets/icons/icon-servings.svg") center center/contain no-repeat;
 }
 .recipe .intro-banner__time-icon {
-  background: url("../assets/icons/icon-time.svg") center center/contain no-repeat var(--color-bg);
+  background: url("../assets/icons/icon-time.svg") center center/contain no-repeat;
 }
 .recipe .intro-banner__difficulty-icon {
-  background: url("../assets/icons/icon-difficulty.svg") center center/contain no-repeat var(--color-bg);
+  background: url("../assets/icons/icon-difficulty.svg") center center/contain no-repeat;
+}
+.recipe .intro-banner__stars-icon {
+  width: clamp(75px, 75%, 200px);
 }
 .recipe .ingredient-panel h4,
 .recipe .instructions-panel h4 {
@@ -481,7 +457,7 @@ body {
 .recipe .nutrition-panel ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0 var(--space-500);
+  gap: 0 var(--space-gap);
 }
 @media (min-width: 1200px) {
   .recipe .nutrition-panel ul {
@@ -533,7 +509,6 @@ body {
     display: flex;
   }
   .recipe .intro-banner__hero-wrapper {
-    max-height: 225px;
     flex: 1 0;
   }
   .recipe .intro-banner__img-credit {
@@ -554,11 +529,21 @@ body {
   }
   .recipe .intro-banner__quick-fact {
     display: flex;
+    justify-content: center;
     align-items: center;
     min-height: auto;
     padding-left: 0;
     padding-right: var(--space-gap);
     font: var(--font-size-subheader-sm) var(--font-family-header);
+  }
+  .recipe .intro-banner__difficulty {
+    padding-right: 0;
+  }
+  .recipe .intro-banner__difficulty svg {
+    width: 70px;
+  }
+  .recipe .intro-banner__difficulty .star {
+    filter: none;
   }
   .recipe .instructions-panel {
     flex: 2 0;

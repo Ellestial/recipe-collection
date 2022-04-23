@@ -150,104 +150,59 @@
   }
 
   .star {
-    fill: var(--color-bg);
+    fill: transparent;
     filter: drop-shadow(4px 4px 0 var(--color-yellow-500));
   }
 
-  [data-difficulty="0"] {
-
-    svg #star-1-half,
-    svg #star-2-half,
-    svg #star-3-half {
-      stroke-width: 0;
-    }
-  }
-
-  [data-difficulty="0.5"] {
-    svg #star-1-half {
-      fill: var(--color-primary);
-    }
-
-    svg #star-2-half,
-    svg #star-3-half {
-      stroke-width: 0;
-    }
-  }
-
   [data-difficulty="1"] {
-    svg #star-1-whole {
+    svg #star-1 {
       fill: var(--color-primary);
-    }
-
-    svg #star-2-half,
-    svg #star-3-half {
-      stroke-width: 0;
-    }
-  }
-
-  [data-difficulty="1.5"] {
-    svg #star-1-whole,
-    svg #star-2-half {
-      fill: var(--color-primary);
-    }
-
-    svg #star-3-half {
-      stroke-width: 0;
     }
   }
 
   [data-difficulty="2"] {
-    svg #star-1-whole,
-    svg #star-2-whole {
-      fill: var(--color-primary);
-    }
-
-    svg #star-3-half {
-      stroke-width: 0;
-    }
-  }
-
-  [data-difficulty="2.5"] {
-    svg #star-1-whole,
-    svg #star-2-whole,
-    svg #star-3-half {
+    svg #star-1,
+    svg #star-2 {
       fill: var(--color-primary);
     }
   }
 
   [data-difficulty="3"] {
-    svg #star-1-whole,
-    svg #star-2-whole,
-    svg #star-3-whole {
+    svg #star-1,
+    svg #star-2,
+    svg #star-3 {
       fill: var(--color-primary);
     }
   }
 
   .intro-banner__icon {
-    width: 30px;
+    width: 40px;
     height: 40px;
     display: block;
     margin: 0 auto;
     padding: 0 var(--space-300);
 
     @include breakpoint(md) {
-      width: 75px;
-      height: 73px;
+      width: 70px;
+      height: 70px;
     }
   }
 
   .intro-banner__servings-icon {
-    background: url('../assets/icons/icon-servings.svg') center center/contain no-repeat var(--color-bg);
+    background: url('../assets/icons/icon-servings.svg') center center/contain no-repeat;
   }
 
   .intro-banner__time-icon {
-    background: url('../assets/icons/icon-time.svg') center center/contain no-repeat var(--color-bg);
+    background: url('../assets/icons/icon-time.svg') center center/contain no-repeat;
   }
 
   .intro-banner__difficulty-icon {
-    background: url('../assets/icons/icon-difficulty.svg') center center/contain no-repeat var(--color-bg);
-  } // end: intro banner
+    background: url('../assets/icons/icon-difficulty.svg') center center/contain no-repeat;
+  }
 
+  .intro-banner__stars-icon {
+    width: clamp(75px, 75%, 200px);
+  } // end: intro banner
 
   // ingredients & instructions
   //-------------------------
@@ -364,7 +319,7 @@
     ul {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0 var(--space-500);
+      gap: 0 var(--space-gap);
 
       @include breakpoint(lg) {
         grid-template-columns: repeat(4, 1fr);
@@ -424,7 +379,6 @@
     }
 
     .intro-banner__hero-wrapper {
-      max-height: 225px;
       flex: 1 0;
     }
 
@@ -451,11 +405,24 @@
 
     .intro-banner__quick-fact {
       display: flex;
+      justify-content: center;
       align-items: center;
       min-height: auto;
       padding-left: 0;
       padding-right: var(--space-gap);
       font: var(--font-size-subheader-sm) var(--font-family-header);
+    }
+
+    .intro-banner__difficulty {
+      padding-right: 0;
+
+      svg {
+        width: 70px;
+      }
+
+      .star {
+        filter: none;
+      }
     }
 
     .instructions-panel {

@@ -12,7 +12,7 @@ data:
   category: breakfast
   servings: 8
   time: 50m
-  difficulty: 1.5
+  difficulty: 2
 
 tags:
 - eggs

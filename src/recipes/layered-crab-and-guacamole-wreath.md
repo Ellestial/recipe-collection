@@ -10,7 +10,7 @@ data:
   category: appetizer
   servings: 10
   time: 30m
-  difficulty: 1.5
+  difficulty: 2
 
 tags:
 - guacamole

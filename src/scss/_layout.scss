@@ -6,6 +6,13 @@ body {
   line-height: 1.2;
 }
 
+p {
+
+  &:not(:last-child) {
+    margin-bottom: var(--space-500);
+  }
+}
+
 .header-secondary {
   margin-bottom: var(--space-900);
   font: var(--font-size-header-sm) var(--font-family-header);
