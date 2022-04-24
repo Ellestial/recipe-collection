@@ -1,0 +1,23 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="70" height="70" viewBox="0 0 70 70" xml:space="preserve">
+  <g filter="url(#filterDropShadow)" fill="none" stroke="#3A3433" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="31,3" vector-effect="non-scaling-stroke">
+    <circle cx="35.001" cy="40.006" r="20.909" vector-effect="inherit"/>
+    <line x1="35" y1="28.191" x2="35.002" y2="37.354" vector-effect="inherit"/>
+    <circle cx="35.002" cy="40.104" r="2.75" vector-effect="inherit"/>
+    <circle cx="35.001" cy="40.104" r="16.065" vector-effect="inherit"/>
+    <rect x="27.146" y="9.086" width="16.152" height="7.316" vector-effect="inherit"/>
+    <rect x="48.316" y="18.25" transform="rotate(45.009 51.87 20.52)" width="7.11" height="4.545" vector-effect="inherit"/>
+    <rect x="14.574" y="18.25" transform="rotate(-45.001 18.129 20.523)" width="7.11" height="4.545" vector-effect="inherit"/>
+  </g>
+  <defs>
+    <filter id="filterDropShadow" x="0" y="0" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="4" dy="4"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.956863 0 0 0 0 0.890196 0 0 0 0 0.654902 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_513_318"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_513_318" result="shape"/>
+    </filter>
+  </defs>
+</svg>

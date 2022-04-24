@@ -1,4 +1,3 @@
-
 /**
  * @license
  * MyFonts Webfont Build ID 4268632, 2021-12-26T15:37:21-0500
@@ -20,10 +19,9 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-
-
+@import url("//hello.myfonts.net/count/412258");
+  
 @font-face {
   font-family: "Romes";
-  src: url('fonts/romes.woff2') format('woff2'), url('fonts/romes.woff') format('woff');
+  src: url('../assets/fonts/romes.woff2') format('woff2'), url('../assets/fonts/romes.woff') format('woff');
 }
-

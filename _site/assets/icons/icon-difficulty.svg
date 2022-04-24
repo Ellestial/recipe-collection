@@ -1,0 +1,21 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="70" height="70" viewBox="0 0 70 70" xml:space="preserve">
+  <g filter="url(#filterDropShadow" fill="none" stroke="#3A3433" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+    <circle stroke-linejoin="round" stroke-dasharray="31,2" cx="35" cy="35.001" r="25.324" vector-effect="inherit"/>
+    <path stroke-linejoin="round" stroke-dasharray="31,3" d="M37.749 35.098a2.75 2.75 0 0 1-5.5 0c0-1.519 2.75-10.75 2.75-10.75s2.75 9.231 2.75 10.75z" vector-effect="inherit"/>
+    <path stroke-miterlimit="10" stroke-dasharray="31,3" d="M22.083 35c0-7.118 5.791-12.909 12.909-12.909S47.901 27.882 47.901 35c0 2.868-.951 5.511-2.539 7.655l4.843 6.659c3.522-3.742 5.696-8.769 5.696-14.314 0-11.548-9.361-20.909-20.909-20.909S14.083 23.452 14.083 35c0 5.545 2.174 10.571 5.696 14.313l4.843-6.658A12.82 12.82 0 0 1 22.083 35z" vector-effect="inherit"/>
+    <line stroke-linejoin="round" stroke-dasharray="31,3" x1="20.005" y1="20.427" x2="25.683" y2="25.105" vector-effect="inherit"/>
+    <line stroke-linejoin="round" stroke-dasharray="31,3" x1="44.745" y1="26.552" x2="50.698" y2="21.646" vector-effect="inherit"/>
+  </g>
+  <defs>
+    <filter id="filterDropShadow" x="0" y="0" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="4" dy="4"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.956863 0 0 0 0 0.890196 0 0 0 0 0.654902 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_513_287"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_513_287" result="shape"/>
+    </filter>
+  </defs>
+</svg>

@@ -2,61 +2,105 @@
 layout: base.liquid
 ---
 
-<main>
-  <a href="" target="_blank">Print Recipe</a>
-  <div class="intro-banner">
+<main class="recipe" data-category="category-{{data.category}}">
+  <div class="intro-banner panel">
     <div class="intro-banner__hero-wrapper">
       {% if img.alt %}
-        <img class="intro-banner__img" src="{{title|slug/}}.jpg" alt="{{img.alt}}" />
+        {% if img.url %}
+        <img class="intro-banner__img" src="{{img.url}}" alt="{{img.alt}}" />
+        {% else %}
+        <img class="intro-banner__img" src="../../assets/{{title|slug/}}.jpg" alt="{{img.alt}}" />
+        {% endif %}
         <div class="intro-banner__img-credit">Photo Credit: {{img.credit}}</div>
       {% endif %}
     </div>
     <div class="intro-banner__content">
-      <div class="intro-banner__tags">
-
+      <button class="intro-banner__print btn--icon btn" onClick="window.print()">Print</button>
+      <div class="intro-banner__links">
+        <div class="intro-banner__source"><span>Source:</span> 
+          {% if data.url %}
+            <a href="{{data.url}}" target="_blank" class="intro-banner__source-btn btn--secondary btn">{{data.author}}</a>
+          {% else if data.author %}
+            <span class="intro-banner__source-text">{{data.author}}</span>
+          {% endif %}
+        </div>
+        <p class="intro-banner__category">{{data.category}}</p>
       </div>
       <h2 class="intro-banner__title">{{title}}</h2>
       <div class="intro-banner__quick-facts">
-        {% if servings %}
-        <p class="servings"><em>Servings</em> {{servings}}</p>
+        {% if data.servings %}
+        <p class="intro-banner__servings intro-banner__quick-fact">
+          <span class="intro-banner__servings-icon intro-banner__icon"></span>
+          <em>Servings</em> 
+          {{data.servings}}</p>
         {% endif %}
 
-        {% if duration %}
-        <p class="duration"><em>Duration</em> {{duration}}</p>
+        {% if data.time %}
+        <p class="intro-banner__time intro-banner__quick-fact">
+          <span class="intro-banner__time-icon intro-banner__icon"></span>
+          <em>Time</em> {{data.time}}</p>
         {% endif %}
 
-        {% if difficulty %}
-        <p class="difficulty"><em>Difficulty</em> {{difficulty}}</p>
+        {% if data.difficulty %}
+        <p class="intro-banner__difficulty intro-banner__quick-fact" data-difficulty='{{data.difficulty}}'>
+          <span class="intro-banner__difficulty-icon intro-banner__icon"></span>
+          <em>Difficulty</em>
+          <svg class="intro-banner__stars-icon" width="160" height="41" viewBox="0 0 140 45" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+            <polygon id="star-1" class="star" fill="inherit" stroke="#3A3433" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round" points="21.667,0 28.362,13.566 43.334,15.742 32.5,26.302 35.058,41.212 21.667,34.173 8.276,41.212 10.833,26.302 0,15.742 14.972,13.566" vector-effect="non-scaling-stroke"/>
+            <use id="star-2" class="star" href="#star-1" x="48" fill="transparent"></use>
+            <use id="star-3" class="star" href="#star-1" x="98" fill="transparent"></use>
+          </svg>
+        </p>
         {% endif %}
       </div>
     </div>
   </div>
 
-  <section class="ingredient-panel">
-    <h3>Ingredients</h3>
-    <div>{{page.excerpt | safe }}</div>
+  <section class="ingredient-panel panel">
+    <div class="ingredient-panel__content">
+      <h3 class="header-secondary">Ingredients</h3>
+      {% if ingredients[0].title %}
+        {% for section in ingredients %}
+          <h4>{{ section.title }}</h4>
+          <ul>
+            {% for ingredient in section.list %}
+              <li>{{ ingredient }}</li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      {% else %}
+        <ul>
+          {% for ingredient in ingredients %}
+            <li>{{ ingredient }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
   </section>
 
-  <section class="instructions-panel">
-    <h3>Instructions</h3>
-    <div>{{content | safe }}</div>
+  <section class="instructions-panel panel">
+    <h3 class="header-secondary">Instructions</h3>
+    <div class="instructions-panel__content">{{content | safe }}</div>
   </section>
 
   {% if nutrition %}
-  <aside class="nutrition-panel">
-    <h3>Nutritional Information</h3>
-    <ul>
-      <li class="nutrition-panel__callout">{{nutrition.calories}} <em>calories</em></li>
-      <li class="nutrition-panel__item"><em>Total Fat</em>{{nutrition.totalFat}}g</li>
-      <li class="nutrition-panel__item"><em>Saturated Fat</em>{{nutrition.saturatedFat}}g</li>
-      <li class="nutrition-panel__item"><em>Trans Fat</em>{{nutrition.transFat}}g</li>
-      <li class="nutrition-panel__item"><em>Cholesterol</em>{{nutrition.cholesterol}}mg</li>
-      <li class="nutrition-panel__item"><em>Total Carbs</em>{{nutrition.carbs}}g</li>
-      <li class="nutrition-panel__item"><em>Sodium</em>{{nutrition.sodium}}mg</li>
-      <li class="nutrition-panel__item"><em>Sugar</em>{{nutrition.sugar}}g</li>
-      <li class="nutrition-panel__item"><em>Protein</em>{{nutrition.protein}}g</li>
-      <li class="nutrition-panel__item"><em>Fiber</em>{{nutrition.fiber}}g</li>
-    </ul>
+  <aside class="nutrition-panel panel">
+
+    <div class="nutrition-panel__content">
+      <h3 class="header-secondary">Nutritional Information</h3>
+      <ul>
+        <li class="nutrition-panel__callout">{{nutrition.calories}} <em>calories</em></li>
+        <li class="nutrition-panel__item"><em>Total Fat</em>{{nutrition.totalFat}}g</li>
+        <li class="nutrition-panel__item"><em>Saturated Fat</em>{{nutrition.saturatedFat}}g</li>
+        <li class="nutrition-panel__item"><em>Trans Fat</em>{{nutrition.transFat}}g</li>
+        <li class="nutrition-panel__item"><em>Cholesterol</em>{{nutrition.cholesterol}}mg</li>
+        <li class="nutrition-panel__item"><em>Total Carbs</em>{{nutrition.carbs}}g</li>
+        <li class="nutrition-panel__item"><em>Sodium</em>{{nutrition.sodium}}mg</li>
+        <li class="nutrition-panel__item"><em>Sugar</em>{{nutrition.sugar}}g</li>
+        <li class="nutrition-panel__item"><em>Protein</em>{{nutrition.protein}}g</li>
+        <li class="nutrition-panel__item"><em>Fiber</em>{{nutrition.fiber}}g</li>
+      </ul>
+    </div>
   </aside>
   {% endif %}
 </main>

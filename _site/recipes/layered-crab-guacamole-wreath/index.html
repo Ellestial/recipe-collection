@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="../../css/main.css">
   <title>Document</title>
 </head>
@@ -18,73 +19,69 @@
   <input type="search">
 
   
-<main>
-  <a href="" target="_blank">Print Recipe</a>
+<main class="recipe" data-category="category-appetizer">
   <div class="intro-banner">
     <div class="intro-banner__hero-wrapper">
       
-        <img class="intro-banner__img" src="layered-crab-and-guacamole-wreath.jpg" alt="Top down view of the dish" />
+        <img class="intro-banner__img" src="../../assets/layered-crab-and-guacamole-wreath.jpg" alt="Top down view of the dish" />
         <div class="intro-banner__img-credit">Photo Credit: Emily</div>
       
     </div>
     <div class="intro-banner__content">
-      <div class="intro-banner__tags">
-
+      <div class="intro-banner__links">
+        <div class="intro-banner__source"><span>Source:</span> <button class="intro-banner__source-btn btn--secondary btn">Karen Mahofer</button></div>
+        <button class="intro-banner__category btn--secondary btn">appetizer</button>
       </div>
       <h2 class="intro-banner__title">Layered Crab & Guacamole Wreath</h2>
       <div class="intro-banner__quick-facts">
         
-        <p class="servings"><em>Servings</em> 10</p>
+        <p class="intro-banner__servings intro-banner__quick-fact"><em>Servings</em> 10</p>
         
 
         
-        <p class="duration"><em>Duration</em> 30m</p>
+        <p class="intro-banner__time intro-banner__quick-fact"><em>Time</em> 30m</p>
         
 
         
-        <p class="difficulty"><em>Difficulty</em> 1.5</p>
+        <p class="intro-banner__difficulty intro-banner__quick-fact" data-difficulty='1.5'><em>Difficulty</em> 1.5</p>
         
       </div>
     </div>
   </div>
 
   <section class="ingredient-panel">
-    <h3>Ingredients</h3>
-    <div></div>
+    <h3 class="header-secondary">Ingredients</h3>
+    <div>#### Base
+- **2** (8oz.) packages cream cheese, softened
+- **¼** c. mayonnaise
+- **¼** c. lemon juice
+- **¼** tsp. cayenne pepper
+
+#### Guacamole
+- **3** ripe avocados
+- **3** cloves of garlic, minced
+- **1** jalepeno, minced
+- **3** Tbsp. lemo juice
+- **1** tsp. Tabasco
+- **½** tsp. salt
+- **1** dash of black pepper
+- **2** green onions, chopped
+- **2** Tbsp. cilantro, minced
+
+#### Crab Topping
+- **2** cans crabmeat, drained
+- **2** green onions, chopped
+- **1** tomato, seeded and chopped
+- **½** c. chopped red onion
+- **¼** c. lime juice
+- **1** Tbsp. cilantro, minced
+- **2** Tbsp. parsley, minced
+</div>
   </section>
 
   <section class="instructions-panel">
-    <h3>Instructions</h3>
+    <h3 class="header-secondary">Instructions</h3>
     <div><h4>Base</h4>
-<ul>
-<li><strong>2</strong> (8oz.) packages cream cheese, softened</li>
-<li><strong>1/4</strong> c. mayonnaise</li>
-<li><strong>1/4</strong> c. lemon juice</li>
-<li><strong>1/4</strong> tsp. cayenne pepper</li>
-</ul>
-<h4>Guacamole</h4>
-<ul>
-<li><strong>3</strong> ripe avocados</li>
-<li><strong>3</strong> cloves of garlic, minced</li>
-<li><strong>1</strong> jalepeno, minced</li>
-<li><strong>3</strong> Tbsp. lemo juice</li>
-<li><strong>1</strong> tsp. Tabasco</li>
-<li><strong>1/2</strong> tsp. salt</li>
-<li><strong>1</strong> dash of black pepper</li>
-<li><strong>2</strong> green onions, chopped</li>
-<li><strong>2</strong> Tbsp. cilantro, minced</li>
-</ul>
-<h4>Crab Topping</h4>
-<ul>
-<li><strong>2</strong> cans crabmeat, drained</li>
-<li><strong>2</strong> green onions, chopped</li>
-<li><strong>1</strong> tomato, seeded and chopped</li>
-<li><strong>1/2</strong> c. chopped red onion</li>
-<li><strong>1/4</strong> c. lime juice</li>
-<li><strong>1</strong> Tbsp. cilantro, minced</li>
-<li><strong>2</strong> Tbsp. parsley, minced</li>
-</ul>
-<h4>Base</h4>
 <ol>
 <li>Add cream cheese, mayonnaise, lemon juice, and cayenne pepper to a bowl. Beat together with a mixer until smooth.</li>
 <li>Spread in a wreath shape on a large platter.</li>
@@ -94,6 +91,7 @@
 <li>Mix garlic, jalepeno, lemon juice, Tabasco, salt, pepper, and avocados in a bowl. Stir together until mostly smooth, but the avocado should still be somewhat chunky. Add green onions and cilantro.</li>
 <li>Spread on top of the cream cheese layer.</li>
 </ol>
+<p><img src="https://via.placeholder.com/500x200" alt="alt text"></p>
 <h4>Crab Topping</h4>
 <ol>
 <li>Mix all crab topping ingredients together. Place on top of guacamole layer and gently press in. Chill. Serve with tortilla chips.</li>
@@ -103,19 +101,22 @@
 
   
   <aside class="nutrition-panel">
-    <h3>Nutritional Information</h3>
-    <ul>
-      <li class="nutrition-panel__callout">200 <em>calories</em></li>
-      <li class="nutrition-panel__item"><em>Total Fat</em>8g</li>
-      <li class="nutrition-panel__item"><em>Saturated Fat</em>1g</li>
-      <li class="nutrition-panel__item"><em>Trans Fat</em>0g</li>
-      <li class="nutrition-panel__item"><em>Cholesterol</em>0mg</li>
-      <li class="nutrition-panel__item"><em>Total Carbs</em>54g</li>
-      <li class="nutrition-panel__item"><em>Sodium</em>150mg</li>
-      <li class="nutrition-panel__item"><em>Sugar</em>3g</li>
-      <li class="nutrition-panel__item"><em>Protein</em>4g</li>
-      <li class="nutrition-panel__item"><em>Fiber</em>4g</li>
-    </ul>
+
+    <div class="nutrition-panel__content">
+      <h3 class="header-secondary">Nutritional Information</h3>
+      <ul>
+        <li class="nutrition-panel__callout">200 <em>calories</em></li>
+        <li class="nutrition-panel__item"><em>Total Fat</em>8g</li>
+        <li class="nutrition-panel__item"><em>Saturated Fat</em>1g</li>
+        <li class="nutrition-panel__item"><em>Trans Fat</em>0g</li>
+        <li class="nutrition-panel__item"><em>Cholesterol</em>0mg</li>
+        <li class="nutrition-panel__item"><em>Total Carbs</em>54g</li>
+        <li class="nutrition-panel__item"><em>Sodium</em>150mg</li>
+        <li class="nutrition-panel__item"><em>Sugar</em>3g</li>
+        <li class="nutrition-panel__item"><em>Protein</em>4g</li>
+        <li class="nutrition-panel__item"><em>Fiber</em>4g</li>
+      </ul>
+    </div>
   </aside>
   
 </main>

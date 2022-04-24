@@ -1,0 +1,477 @@
+
+.recipe {
+  max-width: 1700px;
+  display: grid;
+  grid-template-areas:
+  "intro"
+  "ingre"
+  "instr"
+  "nutri";
+  grid-gap: var(--space-gap);
+  margin: 0 auto;
+  padding: var(--space-gap);
+
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "intro intro"
+    "ingre instr"
+    "nutri nutri";
+  }
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "intro intro intro"
+    "ingre instr instr"
+    "ingre nutri nutri";
+  }
+
+  @each $category in
+  (appetizer),
+  (bakery),
+  (breakfast),
+  (dessert),
+  (entree),
+  (side) {
+    &[data-category='category-#{$category}'] {
+      --color-secondary: var(--color-secondary-#{$category});
+    }
+  }
+
+  // intro banner
+  //-------------------------
+  .intro-banner {
+    display: grid;
+    grid-area: intro;
+    grid-gap: var(--space-gap);
+
+    @include breakpoint(sm) {
+      margin-bottom: var(--space-gap);
+    }
+
+    @include breakpoint(md) {
+      min-height: calc(100vh - var(--space-gap) - var(--space-gap));
+      grid-template-columns: repeat(12, 1fr);
+      margin-bottom: 0;
+    }
+  }
+
+  // banner image
+  .intro-banner__hero-wrapper {
+    position: relative;
+    height: clamp(200px, 40vw, 350px);
+    background: var(--color-primary);
+
+    @include breakpoint(md) {
+      height: inherit;
+      grid-column: span 5;
+    }
+  }
+
+  .intro-banner__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .intro-banner__img-credit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: var(--space-300);
+    padding: var(--space-100) var(--space-300);
+    background: var(--color-bg);
+    font-family: var(--font-family-subheader);
+  }
+
+  .intro-banner__content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(md) {
+      grid-column: span 7;
+    }
+  }
+
+  .intro-banner__print {
+    margin: 0 0 var(--space-300) auto;
+  }
+
+  .intro-banner__links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: var(--space-300);
+    text-transform: capitalize;
+  }
+
+  .intro-banner__title {
+    display: flex;
+    align-items: center;
+    flex: 1 0;
+    padding: var(--space-700) 0;
+    font: var(--font-size-header-lg) var(--font-family-header);
+    text-transform: uppercase;
+    text-shadow: var(--shadow-dark);
+    border-top: 1px solid;
+    line-height: 1;
+  }
+
+  // banner quick facts
+  .intro-banner__quick-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    border-top: 1px solid;
+  }
+
+  .intro-banner__quick-fact {
+    display: block;
+    margin: 0;
+    padding: var(--space-300);
+    font: var(--font-size-header-sm) var(--font-family-header);
+    text-shadow: var(--shadow-dark);
+
+    @include breakpoint(md) {
+      min-height: 160px;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid;
+    }
+
+    em {
+      display: block;
+      margin-right: auto;
+      font: var(--font-size-subheader-sm) var(--font-family-subheader);
+      text-shadow: none;
+      color: var(--color-secondary);
+    }
+  }
+
+  .star {
+    fill: transparent;
+    filter: drop-shadow(4px 4px 0 var(--color-yellow-500));
+  }
+
+  [data-difficulty="1"] {
+    svg #star-1 {
+      fill: var(--color-primary);
+    }
+  }
+
+  [data-difficulty="2"] {
+    svg #star-1,
+    svg #star-2 {
+      fill: var(--color-primary);
+    }
+  }
+
+  [data-difficulty="3"] {
+    svg #star-1,
+    svg #star-2,
+    svg #star-3 {
+      fill: var(--color-primary);
+    }
+  }
+
+  .intro-banner__icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 var(--space-300);
+
+    @include breakpoint(md) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .intro-banner__servings-icon {
+    background: url('../assets/icons/icon-servings.svg') center center/contain no-repeat;
+  }
+
+  .intro-banner__time-icon {
+    background: url('../assets/icons/icon-time.svg') center center/contain no-repeat;
+  }
+
+  .intro-banner__difficulty-icon {
+    background: url('../assets/icons/icon-difficulty.svg') center center/contain no-repeat;
+  }
+
+  .intro-banner__stars-icon {
+    width: clamp(75px, 75%, 200px);
+  } // end: intro banner
+
+  // ingredients & instructions
+  //-------------------------
+  .ingredient-panel,
+  .instructions-panel {
+
+    h4 {
+      margin-bottom: var(--space-300);
+      font: var(--font-size-subheader-lg) var(--font-family-subheader);
+
+      &:not(:first-of-type) {
+        margin-top: var(--space-700);
+      }
+    }
+  } // end: ingredients & instructions
+
+  // ingredient panel
+  //-------------------------
+  .ingredient-panel {
+    position: relative;
+    grid-area: ingre;
+    margin: 0 calc(var(--space-gap) * -1);
+    padding: var(--space-gap) var(--space-gap);
+    background: var(--color-secondary);
+    color: var(--color-body-text-on-dark);
+
+    @include breakpoint(sm) {
+      margin: calc(var(--space-gap) * -1) 0 0 calc(var(--space-gap) * -1);
+    }
+
+    @include breakpoint(md) {
+      margin: 0;
+      padding: 0 var(--space-gap) var(--space-gap) 0;
+    }
+
+    &::before {
+
+      @include breakpoint(md) {
+        width: calc(33.33vw + calc(var(--space-gap) * 2));
+        height: 300%;
+        position: absolute;
+        right: 0;
+        bottom: calc(var(--space-gap) * -1);
+        z-index: -1;
+        pointer-events: none;
+        background: inherit;
+        content: '';
+      }
+    }
+
+    h4 {
+      color: var(--color-header-text-on-dark);
+    }
+
+    ul {
+
+      li:not(:last-child) {
+        margin-bottom: var(--space-500);
+      }
+
+      li {
+        display: flex;
+        gap: var(--space-500);
+      }
+    }
+
+    span {
+      min-width: 40px;
+      text-align: right;
+      font-weight: bold;
+    }
+  } // end: ingredients panel
+
+  // instructions panel
+  //-------------------------
+  .instructions-panel {
+    grid-area: instr;
+
+    .instructions-panel__content {
+      max-width: 900px;
+    }
+
+    h4 {
+      color: var(--color-secondary);
+    }
+
+    ol {
+      counter-reset: section;
+
+      li {
+        display: flex;
+  
+        &:not(:last-child) {
+          margin-bottom: var(--space-900);
+        }
+  
+        &::before {
+          width: 1em;
+          flex-shrink: 0;
+          font: var(--font-size-header-sm) var(--font-family-header);
+          counter-increment: section;
+          text-shadow: var(--shadow-dark);
+          content: counter(section) '.';
+        }
+      }
+    }
+  } // end: instructions panel
+
+  // nutrition panel
+  //-------------------------
+  .nutrition-panel {
+    grid-area: nutri;
+    margin: 0 calc(var(--space-gap) * -1);
+    padding: var(--space-gap);
+    background: var(--color-bg-shade);
+
+    @include breakpoint(md) {
+      margin: 0;
+    }
+  
+    .nutrition-panel__content {
+      position: relative;
+    }
+  
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0 var(--space-gap);
+
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+
+  .nutrition-panel__callout {
+    grid-row: span 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    padding: var(--space-300);
+    text-align: center;
+    font: var(--font-size-header-sm) var(--font-family-header);
+    text-shadow: var(--shadow);
+  
+    em {
+      font: var(--font-size-subheader-lg) var(--font-family-subheader);
+    }
+  }
+
+  .nutrition-panel__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-500) 0;
+    font: var(--font-size-subheader-sm) var(--font-family-header);
+    border-bottom: 1px solid;
+    text-shadow: var(--shadow);
+
+    em {
+      font: var(--font-size-body) var(--font-family-subheader);
+      color: var(--color-secondary);
+      text-shadow: none;
+    }
+  } // end: nutrition panel
+}
+
+@media print {
+  .recipe {
+    display: flex;
+    flex-wrap: wrap;
+
+    --color-secondary: black !important;
+
+    --shadow: none;
+    --shadow-dark: none;
+    --space-900: #{pxToRem(16)};
+    --space-500: #{pxToRem(8)};
+    --space-gap: #{pxToRem(16)};
+
+    .intro-banner {
+      width: 100%;
+      min-height: auto;
+      display: flex;
+    }
+
+    .intro-banner__hero-wrapper {
+      height: 100%;
+      flex: 1 0;
+    }
+
+    .intro-banner__img {
+      position: absolute;
+    }
+
+    .intro-banner__img-credit,
+    .intro-banner__print,
+    .intro-banner__icon {
+      display: none;
+    }
+
+    .intro-banner__content {
+      flex: 2 0;
+    }
+
+    .intro-banner__quick-facts {
+      gap: var(--space-gap);
+      border-bottom: 1px solid;
+    }
+
+    .intro-banner__quick-fact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: auto;
+      padding: 0 var(--space-gap) 0 0;
+      font: var(--font-size-subheader-sm) var(--font-family-header);
+    }
+
+    .intro-banner__stars-icon {
+      stroke-width: 1px;
+    }
+
+    .intro-banner__difficulty {
+      padding-right: 0;
+
+      svg {
+        width: 70px;
+      }
+
+      .star {
+        filter: none;
+      }
+    }
+
+    .instructions-panel {
+      flex: 2 0;
+      padding-left: var(--space-gap);
+      border-left: 1px solid;
+    }
+
+    .ingredient-panel {
+      flex: 1 0;
+      margin: 0;
+      padding: 0;
+      background: white;
+
+      span {
+        min-width: 25px;
+      }
+    }
+
+    .nutrition-panel {
+      width: 100%;
+      break-inside: avoid;
+      
+      ul {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    .nutrition-panel__callout {
+      grid-column: span 2;
+    }
+  
+    .nutrition-panel__item {
+      padding: var(--space-100) 0;
+    }
+  }
+}

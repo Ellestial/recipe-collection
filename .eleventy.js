@@ -1,23 +1,24 @@
 module.exports = function(eleventyConfig) {
 
-  eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: true,
-    excerpt_alias: 'excerpt',
-    excerpt_separator: "<!-- excerpt -->"
-  });
-
   eleventyConfig.addWatchTarget('./src/scss/');
   eleventyConfig.addPassthroughCopy('./src/css/');
+  eleventyConfig.addPassthroughCopy('./src/assets/*.jpg');
+  eleventyConfig.addPassthroughCopy('./src/assets/icons/*.svg');
+  eleventyConfig.addPassthroughCopy('./src/js/script.js');
 
   eleventyConfig.setTemplateFormats([
     'md',
     'css',
-    'jpg'
+    'jpg',
+    'svg'
   ])
 
   return {
     dir: {
-      input: 'src'
-    }
-  }
+      input: 'src',
+    },
+    markdownTemplateEngine: "liquid",
+    dataTemplateEngine: "liquid",
+    htmlTemplateEngine: "liquid",
+  };
 };

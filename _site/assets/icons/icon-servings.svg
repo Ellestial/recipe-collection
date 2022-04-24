@@ -1,0 +1,25 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="70" height="70" viewBox="0 0 70 70" xml:space="preserve">
+  <g filter="url(#filterDropShadow)" fill="none" stroke="#3A3433" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="31,3" vector-effect="non-scaling-stroke">
+    <path d="m30.276 34.007-8.207-19.232h0c-7.118 3.038-11.663 9.561-12.536 16.727l20.743 2.505h0z" vector-effect="inherit"/>
+    <path d="M9.533 31.501a20.789 20.789 0 0 0 8.201 19.217l12.542-16.711-20.743-2.506z" vector-effect="inherit"/>
+    <polygon points="30.276,34.007 30.276,34.007 30.276,34.007" vector-effect="inherit"/>
+    <path d="M38.482 53.237h0l-8.206-19.23h0L17.734 50.718c5.779 4.327 13.63 5.556 20.748 2.519z" vector-effect="inherit"/>
+    <path d="M42.817 17.296c-5.777-4.327-13.631-5.559-20.748-2.521l8.207 19.232 12.541-16.711z" vector-effect="inherit"/>
+    <path d="m30.276 34.007 20.742 2.507a20.789 20.789 0 0 0-8.201-19.218L30.276 34.007h0z" vector-effect="inherit"/>
+    <path d="M47.932 60.242c7.117-3.037 11.662-9.558 12.535-16.724l-20.741-2.507 8.206 19.231z" vector-effect="inherit"/>
+    <path d="M56.158 37.14c-.563-1.143-1.05-2.275-1.058-3.332-.023-2.746 3.427-6.184 2.51-8.927-.916-2.746-5.738-3.421-7.369-5.628-1.69-2.289-.947-7.082-3.215-8.699-2.291-1.633-6.592.637-9.273-.215-2.654-.841-4.865-5.181-7.709-5.158-2.746.023-4.883 4.369-7.627 5.285-2.745.916-7.064-1.273-9.271.357-2.289 1.69-1.447 6.488-3.065 8.755-1.634 2.29-6.435 3.06-7.284 5.743-.842 2.654 2.632 6.039 2.654 8.884.023 2.745-3.426 6.183-2.51 8.927s5.738 3.42 7.37 5.629c1.69 2.287.946 7.08 3.214 8.697 2.291 1.634 6.592-.636 9.273.215 2.654.841 4.865 5.182 7.709 5.158 2.746-.023 4.884-4.369 7.627-5.285.63-.21 1.344-.253 2.094-.221l-9.951-23.318 25.881 3.133z" vector-effect="inherit"/>
+    <path d="m39.726 41.012 9.951 23.319c2.522.111 5.477 1.12 7.178-.137 2.289-1.69 1.447-6.488 3.066-8.755 1.633-2.29 6.434-3.06 7.283-5.743.529-1.668-.645-3.623-1.597-5.552l-25.881-3.132z" vector-effect="inherit"/>
+  </g>
+  <defs>
+    <filter id="filterDropShadow" x="0" y="0" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="4" dy="4"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.956863 0 0 0 0 0.890196 0 0 0 0 0.654902 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_513_319"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_513_319" result="shape"/>
+    </filter>
+  </defs>
+</svg>
