@@ -128,6 +128,7 @@
 
   .intro-banner__quick-fact {
     display: block;
+    margin: 0;
     padding: var(--space-300);
     font: var(--font-size-header-sm) var(--font-family-header);
     text-shadow: var(--shadow-dark);
@@ -267,12 +268,12 @@
         display: flex;
         gap: var(--space-500);
       }
+    }
 
-      span {
-        min-width: 40px;
-        text-align: right;
-        font-weight: bold;
-      }
+    span {
+      min-width: 40px;
+      text-align: right;
+      font-weight: bold;
     }
   } // end: ingredients panel
 
@@ -386,27 +387,27 @@
 
     .intro-banner {
       width: 100%;
+      min-height: auto;
       display: flex;
     }
 
     .intro-banner__hero-wrapper {
+      height: 100%;
       flex: 1 0;
     }
 
-    .intro-banner__img-credit {
+    .intro-banner__img {
+      position: absolute;
+    }
+
+    .intro-banner__img-credit,
+    .intro-banner__print,
+    .intro-banner__icon {
       display: none;
     }
 
     .intro-banner__content {
       flex: 2 0;
-    }
-
-    .intro-banner__print {
-      display: none;
-    }
-
-    .intro-banner__icon {
-      display: none;
     }
 
     .intro-banner__quick-facts {
@@ -419,9 +420,12 @@
       justify-content: center;
       align-items: center;
       min-height: auto;
-      padding-left: 0;
-      padding-right: var(--space-gap);
+      padding: 0 var(--space-gap) 0 0;
       font: var(--font-size-subheader-sm) var(--font-family-header);
+    }
+
+    .intro-banner__stars-icon {
+      stroke-width: 1px;
     }
 
     .intro-banner__difficulty {
@@ -446,9 +450,10 @@
       flex: 1 0;
       margin: 0;
       padding: 0;
+      background: white;
 
       span {
-        min-width: 15px;
+        min-width: 25px;
       }
     }
 
@@ -467,7 +472,6 @@
   
     .nutrition-panel__item {
       padding: var(--space-100) 0;
-      font: var(--font-size-body) var(--font-family-header);
     }
   }
 }

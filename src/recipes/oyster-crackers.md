@@ -18,10 +18,10 @@ tags:
 
 ingredients:
 - 1/2 cup canola oil
-- 1 Tbsp. dill weed
-- 1/2 tsp. garlic salt (or to taste)
+- 1 tablespoon dill weed
+- 1/2 teaspoon garlic salt (or to taste)
 - 1 package Hidden Valley Ranch Dressing
-- 12oz oyster crackers
+- 1 12oz bag of oyster crackers
 
 ---
 

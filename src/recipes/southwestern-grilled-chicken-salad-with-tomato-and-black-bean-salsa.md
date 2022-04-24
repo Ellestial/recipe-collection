@@ -39,24 +39,24 @@ ingredients:
 - title: Chicken
   list:
     - 1 boneless skinless chicken breast half (6 to 7 oz.), trimmed
-    - 1/2 Tbs. chili powder
-    - 1 tsp. light or dark brown sugar
-    - 1/2 tsp. ground coriander
-    - 1/2 tsp. ground cumin
-    - 3/4 tsp. kosher salt
+    - 1/2 tablespoon chili powder
+    - 1 teaspoon light or dark brown sugar
+    - 1/2 teaspoon ground coriander
+    - 1/2 teaspoon ground cumin
+    - 3/4 teaspoon kosher salt
 - title: Dressing
   list:
-    - 6 Tbs. extra-virgin olive oil
-    - 2 Tbs. plus 2 tsp. fresh lime juice
-    - 1 Tbs. plus 2 tsp. chopped fresh cilantro, plus leaves for garnish
-    - 2 tsp. honey
-    - 1/2 tsp. salt
+    - 6 tablespoons extra-virgin olive oil
+    - 2 tablespoons plus 2 teaspoons fresh lime juice
+    - 1 tablespoon plus 2 teaspoons chopped fresh cilantro, plus leaves for garnish
+    - 2 teaspoons honey
+    - 1/2 teaspoon salt
     - Freshly ground black pepper
     - Green Tabasco (optional)
 - title: Salad
   list:
     - 1 cup canned black beans, rinsed and drained
-    - 4 oz. small cherry or grape tomatoes, quartered or halved (about 3/4 cup)
+    - 4 ounces small cherry or grape tomatoes, quartered or halved (about 3/4 cup)
     - 1 large scallion, thinly sliced
     - 2 small heads Bibb lettuce, torn into bite-size pieces (about 9 cups)
     - 1 medium firm-ripe avocado

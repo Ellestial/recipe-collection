@@ -22,29 +22,29 @@ ingredients:
 - title: Base
   list:
     - 2 (8oz.) packages cream cheese, softened
-    - 1/4 c. mayonnaise
-    - 1/4 c. lemon juice
-    - 1/4 tsp. cayenne pepper
+    - 1/4 cup mayonnaise
+    - 1/4 cup lemon juice
+    - 1/4 teaspoon cayenne pepper
 - title: Guacamole
   list:
     - 3 ripe avocados
     - 3 cloves of garlic, minced
     - 1 jalepeno, minced
-    - 3 Tbsp. lemon juice
-    - 1 tsp. Tabasco
-    - 1/2 tsp. salt
+    - 3 tablespoons lemon juice
+    - 1 teaspoon Tabasco
+    - 1/2 teaspoon salt
     - 1 dash of black pepper
     - 2 green onions, chopped
-    - 2 Tbsp. cilantro, minced
+    - 2 tablespoons cilantro, minced
 - title: Crab Topping
   list:
     - 2 cans crabmeat, drained
     - 2 green onions, chopped
     - 1 tomato, seeded and chopped
-    - ½ c. chopped red onion
-    - 1/4 c. lime juice
-    - 1 Tbsp. cilantro, minced
-    - 2 Tbsp. parsley, minced
+    - 1/2 cup chopped red onion
+    - 1/4 cup lime juice
+    - 1 tablespoon cilantro, minced
+    - 2 tablespoons parsley, minced
 
 ---
 

@@ -19,3 +19,9 @@ p {
   text-transform: uppercase;
   border-bottom: 1px solid;
 }
+
+@media print {
+  body {
+    background: white;
+  }
+}

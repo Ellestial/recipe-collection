@@ -33,16 +33,16 @@ tags:
 - fennel
 
 ingredients:
-- 1½ lb. leeks (about 2 large)
-- 3 3 Tbs. extra-virgin olive oil
-- 2 c. finely chopped fresh fennel (from 1 large bulb; fronds reserved for garnish, if you like)
-- ½ c. finely chopped celery plus 1/2 c. coarsely chopped celery leaves
-- ⅓ c. jasmine rice
+- 1 1/2 pound leeks (about 2 large)
+- 3 tablespoons extra-virgin olive oil
+- 2 cups finely chopped fresh fennel (from 1 large bulb; fronds reserved for garnish, if you like)
+- 1/2 cup finely chopped celery plus 1/2 cup coarsely chopped celery leaves
+- 1/3 cup jasmine rice
 - 1 clove garlic, finely chopped
-- ½ tsp. smoked paprika
+- 1/2 taspoon smoked paprika
 - Kosher salt and freshly ground black pepper
-- 6 c. lower-salt chicekn broth
-- 1 lb. boneless, skinless chicken breast, each breast cut into thirds lengthwise, then thinly sliced crosswise
+- 6 cups lower-salt chicekn broth
+- 1 pound boneless, skinless chicken breast, each breast cut into thirds lengthwise, then thinly sliced crosswise
 - Fresh lemon juice, to taste
 
 ---

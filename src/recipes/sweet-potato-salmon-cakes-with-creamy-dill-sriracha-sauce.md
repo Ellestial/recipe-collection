@@ -35,7 +35,7 @@ ingredients:
   list:
   - 12 ounces wild-caught salmon, about 2 fillets, cooked*
   - 1 small sweet potato, cooked and peeled (about 1/2 cup)**
-  - 1 Tbsp seafood seasoning (I used Old Bay Seasoning.)
+  - 1 tablespoon seafood seasoning (I used Old Bay Seasoning.)
   - 3-4 tablespoons chopped fresh dill or 3 teaspoons dried dill weed or more to taste
   - 2 eggs, lightly beaten
   - 1/3 cup finely sliced green onions
@@ -43,21 +43,21 @@ ingredients:
 - title: Creamy Dill Sriracha Sauce
   list:
   - 1/3 cup fat free plain Greek yogurt
-  - 3 Tbsp mayo or additional Greek yogurt
+  - 3 tablespoons mayo or additional Greek yogurt
   - 1 clove garlic, finely minced
-  - 1 Tbsp chopped fresh dill or more to taste
-  - 1/2 tsp honey
+  - 1 tablespoon chopped fresh dill or more to taste
+  - 1/2 teaspoon honey
   - Salt and pepper, to taste
-  - 1-2 tsp sriracha sauce or more to taste
+  - 1-2 teaspoons sriracha sauce or more to taste
 
 - title: Balsamic Maple Brussels Sprouts
   list:
   - 1 lb. Brussels sprouts halved
-  - 1.5 Tbsp extra virgin olive oil, divided
-  - 1/2 tsp salt
-  - 1/4 tsp pepper
-  - 1 Tbsp balsamic vinegar
-  - 1 tsp maple syrup
+  - 1 1/2 tablespoons extra virgin olive oil, divided
+  - 1/2 teaspoon salt
+  - 1/4 teaspoon pepper
+  - 1 tablespoon balsamic vinegar
+  - 1 teaspoon maple syrup
 
 ---
 

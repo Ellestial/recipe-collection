@@ -106,7 +106,7 @@
     --font-size-header-lg: 30pt;
     --font-size-header-sm: 20pt;
     --font-size-subheader-lg: 16pt;
-    --font-size-subheader-sm: 14pt;
+    --font-size-subheader-sm: 12pt;
     --font-size-body: 9pt;
   }
 }
@@ -189,6 +189,11 @@ p:not(:last-child) {
   border-bottom: 1px solid;
 }
 
+@media print {
+  body {
+    background: white;
+  }
+}
 .recipe {
   max-width: 1700px;
   display: grid;
@@ -307,6 +312,7 @@ p:not(:last-child) {
 }
 .recipe .intro-banner__quick-fact {
   display: block;
+  margin: 0;
   padding: var(--space-300);
   font: var(--font-size-header-sm) var(--font-family-header);
   text-shadow: var(--shadow-dark);
@@ -418,7 +424,7 @@ p:not(:last-child) {
   display: flex;
   gap: var(--space-500);
 }
-.recipe .ingredient-panel ul span {
+.recipe .ingredient-panel span {
   min-width: 40px;
   text-align: right;
   font-weight: bold;
@@ -515,22 +521,23 @@ p:not(:last-child) {
   }
   .recipe .intro-banner {
     width: 100%;
+    min-height: auto;
     display: flex;
   }
   .recipe .intro-banner__hero-wrapper {
+    height: 100%;
     flex: 1 0;
   }
-  .recipe .intro-banner__img-credit {
+  .recipe .intro-banner__img {
+    position: absolute;
+  }
+  .recipe .intro-banner__img-credit,
+.recipe .intro-banner__print,
+.recipe .intro-banner__icon {
     display: none;
   }
   .recipe .intro-banner__content {
     flex: 2 0;
-  }
-  .recipe .intro-banner__print {
-    display: none;
-  }
-  .recipe .intro-banner__icon {
-    display: none;
   }
   .recipe .intro-banner__quick-facts {
     gap: var(--space-gap);
@@ -541,9 +548,11 @@ p:not(:last-child) {
     justify-content: center;
     align-items: center;
     min-height: auto;
-    padding-left: 0;
-    padding-right: var(--space-gap);
+    padding: 0 var(--space-gap) 0 0;
     font: var(--font-size-subheader-sm) var(--font-family-header);
+  }
+  .recipe .intro-banner__stars-icon {
+    stroke-width: 1px;
   }
   .recipe .intro-banner__difficulty {
     padding-right: 0;
@@ -563,9 +572,10 @@ p:not(:last-child) {
     flex: 1 0;
     margin: 0;
     padding: 0;
+    background: white;
   }
   .recipe .ingredient-panel span {
-    min-width: 15px;
+    min-width: 25px;
   }
   .recipe .nutrition-panel {
     width: 100%;
@@ -579,7 +589,6 @@ p:not(:last-child) {
   }
   .recipe .nutrition-panel__item {
     padding: var(--space-100) 0;
-    font: var(--font-size-body) var(--font-family-header);
   }
 }
 

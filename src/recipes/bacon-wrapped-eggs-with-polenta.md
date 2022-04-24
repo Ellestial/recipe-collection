@@ -27,13 +27,13 @@ tags:
 ingredients:
 - title: Polenta
   list:
-  - 2 Tbsp (1/4 stick) butter
+  - 2 tablespoons (1/4 stick) butter
   - 1/4 cup minced green onions
   - 3 cups water
-  - 1 tsp salt
+  - 1 teaspoon salt
   - 1 cup polenta (coarse cornmeal)
   - 1/2 cup (packed) grated Parmesan cheese
-  - 1 Tbsp minced fresh thyme
+  - 1 tablespoon minced fresh thyme
 - title: Baked Eggs
   list:
   - 20 thick slices applewood-smoked bacon
@@ -41,7 +41,7 @@ ingredients:
   - 6 ounces Gruyère cheese, grated
   - 8 large eggs
   - 1/4 cup thinly sliced green onions
-  - 1 tsp minced fresh thyme
+  - 1 teaspoon minced fresh thyme
 
 ---
 
