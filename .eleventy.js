@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/css/');
   eleventyConfig.addPassthroughCopy('./src/assets/*.jpg');
   eleventyConfig.addPassthroughCopy('./src/assets/icons/*.svg');
+  eleventyConfig.addPassthroughCopy('./src/js/script.js');
 
   eleventyConfig.setTemplateFormats([
     'md',
