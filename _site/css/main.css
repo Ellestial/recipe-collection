@@ -414,6 +414,15 @@ p:not(:last-child) {
 .recipe .ingredient-panel ul li:not(:last-child) {
   margin-bottom: var(--space-500);
 }
+.recipe .ingredient-panel ul li {
+  display: flex;
+  gap: var(--space-500);
+}
+.recipe .ingredient-panel ul span {
+  min-width: 40px;
+  text-align: right;
+  font-weight: bold;
+}
 .recipe .instructions-panel {
   grid-area: instr;
 }
@@ -554,6 +563,9 @@ p:not(:last-child) {
     flex: 1 0;
     margin: 0;
     padding: 0;
+  }
+  .recipe .ingredient-panel span {
+    min-width: 15px;
   }
   .recipe .nutrition-panel {
     width: 100%;

@@ -1,9 +1,9 @@
-const re = new RegExp('\d+');
+const re = /^([0-9\s//\-\.])*/g;
 
-function test(string) {
-  return string.match(re);
-}
+let ingredients = document.querySelectorAll('.ingredient-panel li');
 
-let test2 = test('1 How 8 you doing');
-
-console.log(test('1 how 0 doing t8'));
+ingredients.forEach(ingredient => {
+  let amount = ingredient.textContent.match(re);
+  let final = ingredient.innerHTML = ingredient.innerHTML.replace(amount, `<span>` + amount + `</span>` + ' ');
+  return final;
+});
