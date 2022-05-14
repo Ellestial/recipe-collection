@@ -178,6 +178,10 @@ body {
   line-height: 1.2;
 }
 
+em {
+  font-style: italic;
+}
+
 p:not(:last-child) {
   margin-bottom: var(--space-500);
 }
@@ -438,14 +442,14 @@ p:not(:last-child) {
 .recipe .instructions-panel h4 {
   color: var(--color-secondary);
 }
+.recipe .instructions-panel p:not(:last-child), .recipe .instructions-panel li:not(:last-child) {
+  margin-bottom: var(--space-900);
+}
 .recipe .instructions-panel ol {
   counter-reset: section;
 }
 .recipe .instructions-panel ol li {
   display: flex;
-}
-.recipe .instructions-panel ol li:not(:last-child) {
-  margin-bottom: var(--space-900);
 }
 .recipe .instructions-panel ol li::before {
   width: 1em;

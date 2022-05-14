@@ -6,6 +6,10 @@ body {
   line-height: 1.2;
 }
 
+em {
+  font-style: italic;
+}
+
 p {
 
   &:not(:last-child) {

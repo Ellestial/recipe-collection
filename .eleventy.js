@@ -13,6 +13,14 @@ module.exports = function(eleventyConfig) {
     'svg'
   ])
 
+  eleventyConfig.addCollection("recipes", function (collection) {
+    return collection.getFilteredByGlob('./src/recipes/*.md');
+  });
+
+  // config.addCollection('recipes', collection => {
+  //     return [...collection.getFilteredByGlob('./src/recipes/*.md')];
+  // });
+
   return {
     dir: {
       input: 'src',

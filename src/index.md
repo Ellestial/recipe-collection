@@ -1,16 +1,12 @@
 ---
 layout: base.liquid
-pagination: 
-  data: collections.recipe
-  size: 2
 ---
 
 # Welcome to the Recipe Site
-
-hello there!
-
-{% for recipe in collections.recipe %}
+{% for recipe in collections.all %}
+{% if recipe.data.data.category == 'dessert' %}
 - [{{recipe.data.title}}]({{recipe.url}})
+{% endif %}
 {% endfor %}
 
 You should read it!

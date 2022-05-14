@@ -290,15 +290,18 @@
       color: var(--color-secondary);
     }
 
+    p, li {
+  
+      &:not(:last-child) {
+        margin-bottom: var(--space-900);
+      }
+    }
+
     ol {
       counter-reset: section;
 
       li {
         display: flex;
-  
-        &:not(:last-child) {
-          margin-bottom: var(--space-900);
-        }
   
         &::before {
           width: 1em;

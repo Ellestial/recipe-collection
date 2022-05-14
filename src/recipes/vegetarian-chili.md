@@ -11,7 +11,7 @@ data:
   category: entree
   servings: 6-8
   time: 3h 45m
-  difficulty: 2
+  difficulty: 1
 
 tags:
 - example
