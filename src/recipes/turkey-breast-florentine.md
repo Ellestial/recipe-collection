@@ -2,9 +2,8 @@
 title: Turkey Breast Florentine
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: The turkey breast is on a Christmas platter. It is cut up and you can see the spinach filling.
+  credit: Emily Sanford
 
 data:
   author: 
