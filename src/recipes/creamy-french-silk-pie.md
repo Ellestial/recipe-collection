@@ -2,16 +2,14 @@
 title: Creamy French Silk Pie
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A pie dish is filled with this recipe. There are swirls of whipped cream on top.
+  credit: Emily Sanford
 
 data:
   author: Pillsbury Harvest Time Baking & Cooking (1990)
-  url: 
   category: dessert
   servings: 10
-  time: 
+  time: 1h 15m 
   difficulty: 1
 
 nutrition:
@@ -40,7 +38,7 @@ ingredients:
 
 ---
 
-1. Heat oven to 450°F. Prepare pie crust according to package directions for unfilled one-crust pie using 9-inch pie pan. Bake for 9-11 minute sor until lightly browned. Cool completely.
+1. Heat oven to 450°F. Prepare pie crust according to package directions for unfilled one-crust pie using 9-inch pie pan. Bake for 9-11 minutes or until lightly browned. Cool completely.
 
 2. In medium saucepan combine sugar, salt, and cornstarch, blend well. Gradually add milk; cook over medium heat until mixture boils, stirring constantly. Reserve 1 tablespoon chocolate chips for topping. Add remaining chocolate chips, butter, and vanilla, stirring until melted and smooth. Pour into small mixing bowl; cover surface with plastic wrap. Cool to room temperature.
 

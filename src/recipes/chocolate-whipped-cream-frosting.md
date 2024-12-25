@@ -2,9 +2,8 @@
 title: Chocolate Whipped Cream Frosting
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: The full photo is just of the frosting with a detailed pattern from a frosting tip.
+  credit: Emily Sanford
 
 data:
   author: 

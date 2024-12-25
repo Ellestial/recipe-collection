@@ -1,5 +1,5 @@
 ---
-title: 
+title: chicken cacciatore, chicken provencal, black bean empanadas, good eggs, potato poblano corn chowder, spaghetti and meatballs, banana pancakes, squash muffins, salmon cakes, 
 
 img:
   url: 

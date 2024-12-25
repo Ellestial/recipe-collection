@@ -7,8 +7,7 @@ img:
   credit: 
 
 data:
-  author: 
-  url: 
+  author: Unknown
   category: bakery
   servings: 12
   time: 30m

@@ -2,9 +2,8 @@
 title: Barbecue Sauce for Fowl II
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A glass dish filled with grilled chicken breasts with the BBQ sauce slathered on it.
+  credit: Emily Sanford
 
 data:
   author: 

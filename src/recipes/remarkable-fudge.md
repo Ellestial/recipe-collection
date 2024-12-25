@@ -2,9 +2,8 @@
 title: Remarkable Fudge
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A glass 9" x 13" pan on a black countertop has fudge cooling down in it.
+  credit: Emily Sanford
 
 data:
   author: Unknown

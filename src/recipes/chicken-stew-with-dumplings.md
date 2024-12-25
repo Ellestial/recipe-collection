@@ -2,9 +2,8 @@
 title: Chicken-Vegetable Stew with Dumplings
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A plate with a dumpling, chicken breast, and a mix of veggies from the recipe. There are also some charred sugar snap peas to the side.
+  credit: Emily Sanford
 
 data:
   author: Better Homes & Gardens Soups and Stews Cook Book

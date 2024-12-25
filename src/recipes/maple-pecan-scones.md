@@ -2,9 +2,8 @@
 title: Maple-Pecan Scones
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A plate has 8 scones in a circle.
+  credit: Emily Sanford
 
 data:
   author: Unknown

@@ -6,7 +6,7 @@ img:
   credit: Emily Sanford
 
 data:
-  author: 
+  author: Fancy Cookies, Pastries and Appetizers with the Mirro Cooky-Pastry Press
   url: 
   category: dessert
   servings: 6-7 dozen

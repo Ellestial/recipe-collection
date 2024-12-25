@@ -2,9 +2,8 @@
 title: Green Beans and Mushrooms
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A circular ceramic dish is filled with this recipe. You can see turkey towards the bottom of the image.
+  credit: Emily Sanford
 
 data:
   author: 

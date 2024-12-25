@@ -6,8 +6,7 @@ img:
   credit: Unknown
 
 data:
-  author: 
-  url: 
+  author: Better Homes and Gardens Special Interest Publications Holiday Recipes (2011)
   category: side
   servings: 6
   time: 60m

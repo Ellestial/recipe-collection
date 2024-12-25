@@ -2,9 +2,8 @@
 title: Waldorf Cake
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A cross-cut view of the cake. It has two layers of red cake with white and blue frosting.
+  credit: Emily Sanford
 
 data:
   author: Family Recipe

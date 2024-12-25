@@ -2,9 +2,8 @@
 title: Cinnamon Pecan Tea Ring
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: The tea ring with a powdered sugar glaze is on a plate. It's outside and being held up over grass.
+  credit: Emily Sanford
 
 data:
   author: Unknown

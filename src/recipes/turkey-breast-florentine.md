@@ -6,8 +6,7 @@ img:
   credit: Emily Sanford
 
 data:
-  author: 
-  url: 
+  author: Better Homes and Gardens Creative Ideas Holiday Cooking (1988)
   category: entree
   servings: 6
   time: 2h 30m

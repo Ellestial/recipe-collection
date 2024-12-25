@@ -2,9 +2,8 @@
 title: Sweet Potato Casserole
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A square ceramic dish holds this casserole. You see only the brown sugar topping and a spoon inserted for serving.
+  credit: Emily Sanford
 
 data:
   author: 

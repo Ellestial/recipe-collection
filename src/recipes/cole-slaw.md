@@ -2,9 +2,8 @@
 title: Cole Slaw
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A metal bowl on a counter is filled with this cole slaw mix.
+  credit: Emily Sanford
 
 data:
   author: Unknown

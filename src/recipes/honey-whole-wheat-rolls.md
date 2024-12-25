@@ -2,9 +2,8 @@
 title: Honey Whole Wheat Rolls
 
 img:
-  url: 
-  alt: 
-  credit: 
+  alt: A tin filled with these rolls. They're browned on the tops and fluffy on the sides.
+  credit: Emily Sanford
 
 data:
   author: Unknown
